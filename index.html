@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Template Layout</title>
+  <meta name="viewport" content="width=768, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Micro+5&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Silkscreen:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Micro+5&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Silkscreen:wght@400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar-logo">
+      <!-- Logo image here -->
+      <img src="assets/yakisova-logo.png" alt="Logo" height="30">
+    </div>
+    <nav class="navbar-links gap-20">
+      <a href="#">SHOP</a>
+      <a href="#">RULES</a>
+      <a href="#">VAULT</a>
+      <a href="#">SUPPORT</a>
+    </nav>
+    <a class="buy-now-btn" href="#">BUY NOW</a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section h-[830px]">
+    <img class="hero-bg" src="assets/cover-pictures/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.png" alt="Banner Background">
+    <div class="hero-content-container">
+      <div class="hero-floating-card">
+        <h2>Chase the Skies</h2>
+        <p>
+          Discover Marketplace content made and updated especially for Vibrant Visuals.<br>
+          Experience the difference with the free Vibrant Adventures world!
+        </p>
+        <div class="hero-buttons-row">
+          <a class="hero-playnow-btn" href="#">PLAY NOW</a>
+          <div class="hero-socials">
+            <img src="https://img.icons8.com/fluency/28/discord-logo.png" alt="Discord">
+            <img src="https://img.icons8.com/fluency/28/tiktok.png" alt="TikTok">
+            <img src="https://img.icons8.com/fluency/28/instagram-new.png" alt="Instagram">
+          </div>
+        </div>
+      </div>
+      <div class="hero-gallery-row">
+        <img src="https://i.imgur.com/7LzYBOK.jpg" alt="Gallery 1">
+        <img src="https://i.imgur.com/6GISbMz.jpg" alt="Gallery 2">
+        <img src="https://i.imgur.com/hvGsxxr.jpg" alt="Gallery 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop Section -->
+  <section class="shop-section">
+    <div class="shop-title">
+      <h1>DISCOVER OUR SHOP</h1>
+      <p class="justify-self-center">Discover Marketplace content made and updated especially for Vibrant Visuals. Experience the difference with the free Vibrant Adventures world!</p>
+    </div>
+    <div class="shop-grid">
+
+
+     <div class="mx-auto overflow-hidden mb-8" style="width: 428px;">
+  <div
+    class="relative"
+    style="
+      width: 428px;
+      height: 421px;
+      background-image: url('assets/shops/01KB5V4E0PXPMR5T18VYMXRED4.png');
+      background-color: #171614;
+      background-size: cover;
+      background-position: center;
+      border-bottom: 4px solid #141414;
+      border:3px solid #262423;
+    ">
+  </div>
+  <div class="pt-4 text-white">
+    <h2 class="text-xl font-bold mb-2">Minecraft Shop 1</h2>
+    <p class="text-sm text-gray-400 mb-4" id="card-description-shop">
+      Discover Marketplace content made and updated especially for Vibrant Visuals. Experience the difference with
+      the free Vibrant Adventures world!
+    </p>
+    <hr style="border: none; height: 2px; background-color: #262423; width: 100%; margin: 0.5rem 0;">
+    <div class="flex justify-between items-center">
+      <button id="buynow-button"
+        class="flex items-center justify-center w-3/4 py-3 px-4 rounded-lg text-white font-semibold transition duration-150">
+        BUY NOW
+        <span class="ml-2 text-xl font-light">&gt;</span>
+      </button>
+      <div class="flex items-center ml-4">
+        <div class="w-8 h-8 rounded-full flex items-center justify-center mr-2">
+          <img src="assets/dollar-icon.png" alt="Coin" class="w-8 h-8">
+        </div>
+        <span class="text-xl font-bold" id="coin-price">250</span>
+      </div>
+    </div>
+  </div>
+</div>
+      <!-- Duplicate or edit more cards as needed -->
+
+       
+    </div>
+  </section>
+
+  <!-- Drei's Vault Section -->
+  <section class="vault-section h-[482px]">
+    <div class="vault-container">
+      <div class="vault-left">
+        <h2 class="vault-title">DREI'S VAULT</h2>
+        <p>Discover Marketplace content made and updated especially for Vibrant Visuals. Experience the difference with
+          the free Vibrant Adventures world!</p>
+        <a class="vault-btn" href="#">AVAIL NOW!</a>
+      </div>
+      <div class="vault-right">
+        <img class="vault-img w-screen h-auto" src="assets/drei-vault2.png" alt="Vault Showcase">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-upper">
+      <img src="assets/footer-logo.png" alt="Logo" height="36">
+      <div class="footer-links ">
+        <span class="hover:scale-125 transition-transform duration-300 cursor-pointer">Product</span>
+        <span class="hover:scale-125 transition-transform duration-300 cursor-pointer">Features</span>
+        <span class="hover:scale-125 transition-transform duration-300 cursor-pointer">Pricing</span>
+        <span class="hover:scale-125 transition-transform duration-300 cursor-pointer">Resources</span>
+      </div>
+      <div class="footer-socials">
+        <img src="assets/discord-logo.png" alt="Discord" height="28" width="28"
+          class="cursor-pointer hover:scale-125 transition-transform duration-300">
+        <img src="assets/ig-logo.png" alt="Instagram" height="28" width="28"
+          class="cursor-pointer hover:scale-125 transition-transform duration-300">
+        <img src="assets/tiktok-logo.png" alt="Tiktok" height="28" width="28"
+          class="cursor-pointer hover:scale-125 transition-transform duration-300">
+      </div>
+    </div>
+    <div class="footer-lower">
+      <hr class="w-[1166.4px] justify-self-center">
+      <p>&copy; Copyright 2025, All Rights Reserved by<br>@Fujin.dev</p>
+    </div>
+  </footer>
+</body>
+
+</html>

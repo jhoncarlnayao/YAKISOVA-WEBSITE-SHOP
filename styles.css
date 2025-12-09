@@ -1,0 +1,589 @@
+body {
+  background: #171614;
+  color: #fff;
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  
+  align-items: center;
+  background: #262523;
+  height: 86px;
+  padding: 0 102px;
+  justify-content: space-between;
+  box-shadow: 0 2px 2px #0002;
+  position: relative;
+  z-index: 10;
+}
+
+.navbar-logo img {
+  height: 32px;
+  vertical-align: middle;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: #FFF;
+font-family: "Segoe UI";
+font-size: 15px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.17px;
+display: flex;
+gap:20px;
+}
+
+.navbar-links a:hover {
+  color: #e960ff;
+}
+
+.buy-now-btn {
+ border: 1px solid #B060B4;
+background: rgba(217, 217, 217, 0.00);
+  color: #fff;
+  padding: 7px 20px;
+  border-radius: 3px;
+ color: #B060B4;
+font-family: "Segoe UI";
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.18px;
+  transition: background 0.1s, color 0.1s;
+}
+
+.buy-now-btn:hover {
+  background: #e960ff;
+  color: #111;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 430px;
+  background: #181526;
+  overflow: hidden;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-content-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 2;
+  padding: 0 0 48px 85px;
+}
+
+.hero-floating-card {
+  background: #161615;
+  border-radius: 0 4px 4px 0;
+  box-shadow: 6px 12px 0 #000b, 0 2px 22px #000c;
+  max-width: 410px;
+  padding: 28px 28px 22px 24px;
+  margin-bottom: 18px;
+  border-left: 8px solid #000;
+  font-family: 'Press Start 2P', monospace;
+  color: #fff;
+  position: relative;
+}
+
+.hero-floating-card::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -24px;
+  top: -20px;
+  width: 28px;
+  height: 22px;
+  background: #191919;
+  border: 6px solid #000;
+  border-bottom: 0;
+  border-right: 0;
+  z-index: 3;
+  border-radius: 0 0 18px 0;
+}
+
+.hero-floating-card h2 {
+  font-size: 1.22rem;
+  margin: 0 0 12px 0;
+}
+
+.hero-floating-card p {
+  color: #ededed;
+  font-size: .93rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.hero-buttons-row {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.hero-playnow-btn {
+  padding: 11px 28px;
+  background: #7b2282;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.08rem;
+  border-radius: 3px;
+  letter-spacing: .01em;
+  border: none;
+  box-shadow: 1px 2px 0 #ae6bfd, 0 1px 0 #111;
+  margin-right: 15px;
+  transition: background 0.15s;
+}
+
+.hero-playnow-btn:hover {
+  background: #ae6bfd;
+  color: #222;
+}
+
+.hero-socials {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.hero-socials img {
+  background: #232220;
+  border-radius: 14px;
+  padding: 3px;
+  width: 30px;
+  height: 30px;
+}
+
+.hero-gallery-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 33px;
+  margin-left: 420px;
+}
+
+.hero-gallery-row img {
+  width: 174px;
+  height: 82px;
+  object-fit: cover;
+  border-radius: 3px;
+  border: 2px solid #232220;
+  background: #191919;
+  box-shadow: 1px 2px 0 #000d;
+}
+
+/* Shop Section */
+.shop-section {
+  background: #171614;
+  padding-bottom: 38px;
+  border-top: 5px solid #1a1816;
+}
+
+.shop-title {
+  text-align: center;
+  padding: 40px 10px 30px 10px;
+}
+
+.shop-title h1 {
+  color: #FFF;
+  -webkit-text-stroke-width: 10px;
+  -webkit-text-stroke-color: #FFF;
+  font-family: "Micro 5";
+  font-size: 150px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.5px;
+}
+
+.shop-title p {
+  color: #979797;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  width: 700px;
+  letter-spacing: 0.16px;
+  margin-bottom: 20px;
+}
+
+.shop-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.shop-card {
+  width: 333px;
+  background: #191919;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0;
+  box-shadow: 0 2px 7px #0006;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-card img {
+  width: 100%;
+  object-fit: cover;
+  height: 220px;
+  background: #232220;
+  display: block;
+}
+
+.shop-card-content {
+  padding: 18px 18px 10px 18px;
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-card-content h3 {
+  font-size: 1.22rem;
+  margin: 0 0 8px 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.shop-card-content p {
+  color: #c1bfe0;
+  margin: 0 0 19px 0;
+  font-size: 0.93rem;
+  flex: 1 1 100%;
+}
+
+.shop-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.shop-buy-btn {
+  background: #a53ff6;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Montserrat', Arial, sans-serif;
+  letter-spacing: 0.01em;
+  padding: 7px 26px;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+.shop-coins {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: #ffe066;
+  font-size: 1.06rem;
+  gap: 5px;
+}
+
+.shop-coins img {
+  width: 22px;
+  height: 22px;
+  margin-right: 3px;
+}
+
+/* Vault Section */
+.vault-section {
+  background: #232220;
+  border-top: 5px solid #1a1816;
+  padding-top: 38px;
+  padding-bottom: 0;
+}
+
+.vault-container {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 38px 0 32px 0;
+  gap: 42px;
+}
+
+.vault-left {
+  flex: 1 1 60%;
+}
+
+.vault-title {
+  font-family: 'Press Start 2P', monospace;
+  color: #ffe066;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -3px;
+  margin: 0 0 12px 0;
+}
+
+.vault-left p {
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 125% */
+  letter-spacing: 0.16px;
+  width: 388px;
+  margin-bottom: 18px;
+}
+
+.vault-btn {
+  /* 1. Base Layout */
+  display: inline-block;
+  font-family: 'Open sans', Arial, sans-serif;
+  text-decoration: none;
+  margin-top: 7px;
+
+
+  background: #FDC32C;
+  border-top: 10px solid #FFD953;
+  border-bottom: 10px solid #DB9F21;
+  border-left: none;
+  border-right: none;
+
+
+  color: #000;
+  font-weight: 800;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+
+
+  padding: 5px 100px;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+
+.vault-btn:active {
+  border-top-width: 5px;
+  border-bottom-width: 5px;
+  transform: translateY(5px);
+}
+
+.vault-right {
+  flex: 1 1 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vault-img {
+  display: block;
+  width: 400px;
+  max-width: 100%;
+  border-radius: 7px;
+  border: 2px solid #ffe066;
+  background: #191919;
+  box-shadow: 0 0 12px #ffe06655;
+}
+
+/* Footer */
+.footer {
+  background: #232220;
+  padding-top: 28px;
+  padding-bottom: 32px;
+}
+
+.footer-upper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 38px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-socials img {
+  background: #191919;
+  border-radius: 16px;
+  padding: 3px;
+}
+
+.footer-lower {
+  text-align: center;
+  color: #bdbdbd;
+  margin-top: 34px;
+}
+
+.footer-lower hr {
+  border: 1px solid #363636;
+  margin-bottom: 13px;
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+
+  .shop-grid,
+  .vault-container,
+  .footer-upper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vault-right {
+    margin-top: 22px;
+  }
+
+  .vault-img {
+    width: 95vw;
+    max-width: 430px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-content-container {
+    padding-left: 30px;
+    padding-bottom: 28px;
+  }
+
+  .hero-floating-card {
+    max-width: 380px;
+    padding: 18px 12px 16px 12px;
+  }
+
+  .hero-gallery-row {
+    margin-left: 0;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+#buynow-button {
+  display: inline-block;
+  font-family: 'Open sans', Arial, sans-serif;
+  text-decoration: none;
+  margin-top: 7px;
+  background: #732377;
+  border-top: 4px solid #B060B4;
+  border-bottom: 4px solid #631C64;
+  border-left: none;
+  border-right: none;
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  padding: 3px 15px;
+  border-radius: 0px;
+  cursor: pointer;
+  color: white;
+
+}
+
+#coin-price {
+  color: #FFF;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FFF;
+  font-family: Monocraft;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.22px;
+}
+
+#card-description-shop {
+  color: #8C8C8C;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 18px;
+  /* 125% */
+  letter-spacing: 0.16px;
+}
+
+
+
+
+@media (max-width: 800px) {
+  .hero-section {
+    height: 220px;
+  }
+
+  .hero-bg {
+    height: 220px;
+  }
+
+  .shop-card {
+    width: 90vw;
+    min-width: 240px;
+    max-width: 390px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    height: 320px;
+  }
+
+  .hero-gallery-row img {
+    width: 110px;
+    height: 60px;
+  }
+
+  .hero-gallery-row {
+    margin-left: 0;
+  }
+
+  .hero-content-container {
+    padding-left: 0;
+  }
+
+  
+
+}
