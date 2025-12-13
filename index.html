@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Template Layout</title>
+  <title>Yakisova</title>
   <meta name="viewport" content="width=768, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
@@ -19,9 +19,15 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Micro+5&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Silkscreen:wght@400;700&display=swap"
     rel="stylesheet">
+   <link rel="icon" type="image/png" sizes="48x48" href="assets/cursor2.png">
+
+
+   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
 </head>
 
 <body>
+  <div id="custom-cursor"></div>
   <!-- Navbar -->
   <header class="navbar">
     <div class="navbar-logo">
@@ -38,45 +44,61 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero-section h-[830px]">
-    <img class="hero-bg" src="assets/cover-pictures/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.png" alt="Banner Background">
-    <div class="hero-content-container">
-      <div class="hero-floating-card">
+<section class="hero-section relative h-[840px] mb-0">
+    <div id="hero-particles" class="absolute inset-0 z-0">
+
+    <img class="hero-bg h-[690px]" src="assets/cover-pictures/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.png" 
+      alt="Banner Background" id="main-gallery">
+    <div class="hero-content-container flex flex-col items-center text-center pt-44 gap-10">
+
+      <div class="hero-floating-card flex flex-col items-start text-left ">
         <h2>Chase the Skies</h2>
-        <p>
+
+        <p class="mt-3 max-w-md">
           Discover Marketplace content made and updated especially for Vibrant Visuals.<br>
           Experience the difference with the free Vibrant Adventures world!
         </p>
-        <div class="hero-buttons-row">
+
+        <div class="hero-buttons-row flex items-center gap-6 mt-6">
           <a class="hero-playnow-btn" href="#">PLAY NOW</a>
-          <div class="hero-socials">
-            <img src="https://img.icons8.com/fluency/28/discord-logo.png" alt="Discord">
-            <img src="https://img.icons8.com/fluency/28/tiktok.png" alt="TikTok">
-            <img src="https://img.icons8.com/fluency/28/instagram-new.png" alt="Instagram">
+
+          <div class="hero-socials flex items-center gap-4">
+            <img src="assets/discord-logo.png" alt="Discord" height="28" width="28"
+              class="cursor-none hover:scale-125 transition-transform duration-300">
+            <img src="assets/ig-logo.png" alt="Instagram" height="28" width="28"
+              class="cursor-none hover:scale-125 transition-transform duration-300">
+            <img src="assets/tiktok-logo.png" alt="Tiktok" height="28" width="28"
+              class="cursor-none hover:scale-125 transition-transform duration-300">
           </div>
         </div>
       </div>
-      <div class="hero-gallery-row">
-        <img src="https://i.imgur.com/7LzYBOK.jpg" alt="Gallery 1">
-        <img src="https://i.imgur.com/6GISbMz.jpg" alt="Gallery 2">
-        <img src="https://i.imgur.com/hvGsxxr.jpg" alt="Gallery 3">
+
+
+      <div class="hero-gallery-row flex items-center justify-center gap-12  ">
+        <img src="assets/cover-pictures/2025-11-08_16.08.07.png" alt="Gallery 1"
+          class="cursor-none hover:scale-125 transition-transform duration-300" id="gallery-1">
+        <img src="assets/cover-pictures/2025-11-08_16.05.26.png" alt="Gallery 2"
+          class="cursor-none hover:scale-125 transition-transform duration-300" id="gallery-2">
+        <img src="assets/cover-pictures/2025-11-08_16.09.04.png" alt="Gallery 3"
+          class="cursor-none hover:scale-125 transition-transform duration-300" id="gallery-3">
       </div>
+
     </div>
+</div>
   </section>
 
   <!-- Shop Section -->
   <section class="shop-section">
     <div class="shop-title">
       <h1>DISCOVER OUR SHOP</h1>
-      <p class="justify-self-center">Discover Marketplace content made and updated especially for Vibrant Visuals. Experience the difference with the free Vibrant Adventures world!</p>
+      <p class="justify-self-center">Discover Marketplace content made and updated especially for Vibrant Visuals.
+        Experience the difference with the free Vibrant Adventures world!</p>
     </div>
     <div class="shop-grid">
 
 
-     <div class="mx-auto overflow-hidden mb-8" style="width: 428px;">
-  <div
-    class="relative"
-    style="
+      <div class="mx-auto overflow-hidden mb-8" style="width: 428px;">
+        <div class="relative" style="
       width: 428px;
       height: 421px;
       background-image: url('assets/shops/01KB5V4E0PXPMR5T18VYMXRED4.png');
@@ -86,32 +108,32 @@
       border-bottom: 4px solid #141414;
       border:3px solid #262423;
     ">
-  </div>
-  <div class="pt-4 text-white">
-    <h2 class="text-xl font-bold mb-2">Minecraft Shop 1</h2>
-    <p class="text-sm text-gray-400 mb-4" id="card-description-shop">
-      Discover Marketplace content made and updated especially for Vibrant Visuals. Experience the difference with
-      the free Vibrant Adventures world!
-    </p>
-    <hr style="border: none; height: 2px; background-color: #262423; width: 100%; margin: 0.5rem 0;">
-    <div class="flex justify-between items-center">
-      <button id="buynow-button"
-        class="flex items-center justify-center w-3/4 py-3 px-4 rounded-lg text-white font-semibold transition duration-150">
-        BUY NOW
-        <span class="ml-2 text-xl font-light">&gt;</span>
-      </button>
-      <div class="flex items-center ml-4">
-        <div class="w-8 h-8 rounded-full flex items-center justify-center mr-2">
-          <img src="assets/dollar-icon.png" alt="Coin" class="w-8 h-8">
         </div>
-        <span class="text-xl font-bold" id="coin-price">250</span>
+        <div class="pt-4 text-white">
+          <h2 class="text-xl font-bold mb-2">Minecraft Shop 1</h2>
+          <p class="text-sm text-gray-400 mb-4" id="card-description-shop">
+            Discover Marketplace content made and updated especially for Vibrant Visuals. Experience the difference with
+            the free Vibrant Adventures world!
+          </p>
+          <hr style="border: none; height: 2px; background-color: #262423; width: 100%; margin: 0.5rem 0;">
+          <div class="flex justify-between items-center">
+            <button id="buynow-button"
+              class="flex items-center justify-center w-3/4 py-3 px-4 rounded-lg text-white font-semibold transition duration-150">
+              BUY NOW
+              <span class="ml-2 text-xl font-light">&gt;</span>
+            </button>
+            <div class="flex items-center ml-4">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center mr-2">
+                <img src="assets/dollar-icon.png" alt="Coin" class="w-8 h-8">
+              </div>
+              <span class="text-xl font-bold" id="coin-price">250</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
       <!-- Duplicate or edit more cards as needed -->
 
-       
+
     </div>
   </section>
 
@@ -155,5 +177,34 @@
     </div>
   </footer>
 </body>
+
+
+
+<script>
+  const mainGallery = document.getElementById("main-gallery");
+  const thumbnails = document.querySelectorAll("#gallery-1, #gallery-2, #gallery-3");
+
+  mainGallery.style.transition = "opacity 0.4s ease";
+
+  thumbnails.forEach(thumb => {
+    thumb.addEventListener("click", () => {
+      mainGallery.style.opacity = 0;
+      setTimeout(() => {
+        mainGallery.src = thumb.src;
+        mainGallery.style.opacity = 1;
+      }, 400);
+    });
+  });
+
+
+  const cursor = document.getElementById("custom-cursor");
+
+  window.addEventListener("mousemove", e => {
+    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+  });
+
+
+</script>
+
 
 </html>

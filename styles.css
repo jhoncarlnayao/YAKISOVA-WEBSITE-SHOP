@@ -2,22 +2,36 @@ body {
   background: #171614;
   color: #fff;
   margin: 0;
-  font-family: 'Montserrat', Arial, sans-serif;
+  /* font-family: 'Montserrat', Arial, sans-serif; */
+  /* cursor: url("assets/cursor.png") 16 16, auto; */
+   cursor: none;
 }
 
 /* Navbar */
 .navbar {
   display: flex;
-  
   align-items: center;
   background: #262523;
-  height: 86px;
+  height: 80px;
   padding: 0 102px;
   justify-content: space-between;
   box-shadow: 0 2px 2px #0002;
+  border-bottom: 5px solid rgba(40, 40, 40, 0.47);
   position: relative;
   z-index: 10;
+  
 }
+
+#custom-cursor {
+  position: fixed;
+  width: 54px;
+  height: 54px;
+  background: url("assets/cursor2.png") no-repeat center / contain;
+  pointer-events: none;
+  z-index: 9999;
+    transition: transform 0.1s ease-out; 
+}
+
 
 .navbar-logo img {
   height: 32px;
@@ -33,7 +47,7 @@ body {
 .navbar-links a {
   color: #FFF;
 font-family: "Segoe UI";
-font-size: 15px;
+font-size: 13px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
@@ -72,10 +86,12 @@ letter-spacing: 0.18px;
   position: relative;
   width: 100%;
   height: 430px;
-  background: #181526;
+  background: #171614;
   overflow: hidden;
   font-family: 'Montserrat', Arial, sans-serif;
 }
+
+
 
 .hero-bg {
   position: absolute;
@@ -85,6 +101,7 @@ letter-spacing: 0.18px;
   height: 100%;
   object-fit: cover;
   z-index: 1;
+border-bottom: 5px solid rgba(40, 40, 40, 0.47) inset;
 }
 
 .hero-content-container {
@@ -101,33 +118,19 @@ letter-spacing: 0.18px;
 }
 
 .hero-floating-card {
-  background: #161615;
+  background: #171614;
   border-radius: 0 4px 4px 0;
-  box-shadow: 6px 12px 0 #000b, 0 2px 22px #000c;
-  max-width: 410px;
-  padding: 28px 28px 22px 24px;
+  max-width: 650px;
+  padding: 38px 38px 22px 24px;
   margin-bottom: 18px;
-  border-left: 8px solid #000;
   font-family: 'Press Start 2P', monospace;
   color: #fff;
-  position: relative;
+  position: relative; 
+  top: 30%;
+  right: 20%;
 }
 
-.hero-floating-card::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: -24px;
-  top: -20px;
-  width: 28px;
-  height: 22px;
-  background: #191919;
-  border: 6px solid #000;
-  border-bottom: 0;
-  border-right: 0;
-  z-index: 3;
-  border-radius: 0 0 18px 0;
-}
+
 
 .hero-floating-card h2 {
   font-size: 1.22rem;
@@ -150,24 +153,28 @@ letter-spacing: 0.18px;
 }
 
 .hero-playnow-btn {
-  padding: 11px 28px;
-  background: #7b2282;
-  color: #fff;
+  display: inline-block;
+  font-family: 'Open sans', Arial, sans-serif;
   text-decoration: none;
-  font-weight: 700;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1.08rem;
-  border-radius: 3px;
-  letter-spacing: .01em;
-  border: none;
-  box-shadow: 1px 2px 0 #ae6bfd, 0 1px 0 #111;
-  margin-right: 15px;
-  transition: background 0.15s;
+  margin-top: 7px;
+  background: #732377;
+  border-top: 4px solid #B060B4;
+  border-bottom: 4px solid #631C64;
+  border-left: none;
+  border-right: none;
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  padding: 3px 15px;
+  border-radius: 0px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.4s ease-in-out;
 }
 
 .hero-playnow-btn:hover {
-  background: #ae6bfd;
-  color: #222;
+  transform: scale(1.1);
 }
 
 .hero-socials {
@@ -187,8 +194,8 @@ letter-spacing: 0.18px;
 .hero-gallery-row {
   display: flex;
   gap: 12px;
-  margin-top: 33px;
-  margin-left: 420px;
+  /* margin-top: 50px; */
+  margin-left: 470px;
 }
 
 .hero-gallery-row img {
@@ -215,10 +222,10 @@ letter-spacing: 0.18px;
 
 .shop-title h1 {
   color: #FFF;
-  -webkit-text-stroke-width: 10px;
+  -webkit-text-stroke-width: 5px;
   -webkit-text-stroke-color: #FFF;
   font-family: "Micro 5";
-  font-size: 150px;
+  font-size: 100px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -229,11 +236,11 @@ letter-spacing: 0.18px;
   color: #979797;
   text-align: center;
   font-family: "Open Sans";
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-  width: 700px;
+  width: 500px;
   letter-spacing: 0.16px;
   margin-bottom: 20px;
 }
@@ -521,7 +528,6 @@ letter-spacing: 0.18px;
   border-radius: 0px;
   cursor: pointer;
   color: white;
-
 }
 
 #coin-price {
