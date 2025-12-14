@@ -40,8 +40,14 @@
       <a href="#">VAULT</a>
       <a href="#">SUPPORT</a>
     </nav>
-    <a class="buy-now-btn" href="#">BUY NOW</a>
+    <a class="buy-now-btn cursor-none" href="#">BUY NOW</a>
   </header>
+
+
+<main id="content">
+
+
+
 
   <!-- Hero Section -->
 <section class="hero-section relative h-[840px] mb-0">
@@ -60,7 +66,10 @@
         </p>
 
         <div class="hero-buttons-row flex items-center gap-6 mt-6">
-          <a class="hero-playnow-btn" href="#">PLAY NOW</a>
+       <a class="hero-playnow-btn cursor-none" href="#" id="open-playnow-popup">
+  PLAY NOW
+</a>
+
 
           <div class="hero-socials flex items-center gap-4">
             <img src="assets/discord-logo.png" alt="Discord" height="28" width="28"
@@ -84,6 +93,84 @@
       </div>
 
     </div>
+</div>
+
+
+
+
+
+<div id="discord-modal" class="fixed inset-0 z-[999] hidden items-center justify-center">
+  <div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+
+  <div class="relative bg-[#e6ddd6] w-[920px] h-[420px] border-[6px] border-[#2b2b2b] flex font-['Press_Start_2P']">
+    
+    <button id="close-discord-modal"
+      class="absolute top-3 right-3 w-10 h-10 bg-[#2b2b2b] text-white flex items-center justify-center hover:scale-110 transition cursor-none">
+      ✕
+    </button>
+
+    <div class="w-1/2 p-10 flex flex-col justify-center gap-6 bg-[#f3f1ee] border-r-[4px] border-[#2b2b2b]">
+      <h2 class="text-[26px] text-center tracking-widest">JOIN YAKISOVA DISCORD</h2>
+
+      <button
+        class="bg-[#7a2b8f] text-white py-4 border-[4px] border-[#2b2b2b] hover:brightness-110 transition cursor-none">
+        PLAY NOW →
+      </button>
+
+      <button
+        class="bg-[#d9cfc7] text-black py-4 border-[4px] border-[#2b2b2b] hover:brightness-105 transition cursor-none">
+        SIGN UP
+      </button>
+
+      <p class="text-[10px] text-center leading-5 text-[#444]">
+        Discover Marketplace content made and updated especially for Vibrant Visuals.
+        Experience the difference with the free Vibrant Adventures world!
+      </p>
+    </div>
+
+    <div class="w-1/2 flex items-center justify-center bg-[#ece6e1]">
+      <div class="grid grid-cols-2 gap-6">
+        <div class="w-20 h-20 bg-[#3b3b3b] flex items-center justify-center">
+          <div class="w-6 h-6 bg-[#ece6e1]"></div>
+        </div>
+        <div class="w-20 h-20 bg-[#3b3b3b] flex items-center justify-center">
+          <div class="w-6 h-6 bg-[#ece6e1]"></div>
+        </div>
+        <div class="w-20 h-20 bg-[#3b3b3b] flex items-center justify-center">
+          <div class="w-6 h-6 bg-[#ece6e1]"></div>
+        </div>
+        <div class="w-20 h-20 bg-[#3b3b3b] grid grid-cols-3 gap-1 p-2">
+          <div class="bg-[#ece6e1]"></div>
+          <div></div>
+          <div class="bg-[#ece6e1]"></div>
+          <div></div>
+          <div class="bg-[#ece6e1]"></div>
+          <div></div>
+          <div class="bg-[#ece6e1]"></div>
+          <div></div>
+          <div class="bg-[#ece6e1]"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="playnow-popup" id="playnow-popup" >
+  <div class="container-playnow-pop">
+    <div class="title-container">
+      <h1>JOIN YAKISOVA NOW </h1>
+    </div>
+    <div class="2boxes-container">
+      <div class="box-1">
+        <a class="hero-ipaddress-btn cursor-none" href="#">PLAY NOW</a>
+        <a class="hero-signup-btn cursor-none" href="#" >SIGN UP </a>
+        <div class="bg-[#E3E3E3] w-[460px] h-[2px]"></div>
+        <p>Discover Marketplace content made and updated especially for Vibrant Visuals. Experience the difference with the free Vibrant Adventures world!</p>
+      </div>
+    </div>
+  </div>
 </div>
   </section>
 
@@ -118,7 +205,7 @@
           <hr style="border: none; height: 2px; background-color: #262423; width: 100%; margin: 0.5rem 0;">
           <div class="flex justify-between items-center">
             <button id="buynow-button"
-              class="flex items-center justify-center w-3/4 py-3 px-4 rounded-lg text-white font-semibold transition duration-150">
+              class="flex items-center justify-center w-3/4 py-3 px-4 rounded-lg text-white font-semibold transition duration-150 cursor-none">
               BUY NOW
               <span class="ml-2 text-xl font-light">&gt;</span>
             </button>
@@ -133,6 +220,180 @@
       </div>
       <!-- Duplicate or edit more cards as needed -->
 
+          <div class="mx-auto overflow-hidden mb-8" style="width: 428px;">
+        <div class="relative" style="
+      width: 428px;
+      height: 421px;
+      background-image: url('assets/shops/01KB5V4E0PXPMR5T18VYMXRED4.png');
+      background-color: #171614;
+      background-size: cover;
+      background-position: center;
+      border-bottom: 4px solid #141414;
+      border:3px solid #262423;
+    ">
+        </div>
+        <div class="pt-4 text-white">
+          <h2 class="text-xl font-bold mb-2">Minecraft Shop 1</h2>
+          <p class="text-sm text-gray-400 mb-4" id="card-description-shop">
+            Discover Marketplace content made and updated especially for Vibrant Visuals. Experience the difference with
+            the free Vibrant Adventures world!
+          </p>
+          <hr style="border: none; height: 2px; background-color: #262423; width: 100%; margin: 0.5rem 0;">
+          <div class="flex justify-between items-center">
+            <button id="buynow-button"
+              class="flex items-center justify-center w-3/4 py-3 px-4 rounded-lg text-white font-semibold transition duration-150 cursor-none">
+              BUY NOW
+              <span class="ml-2 text-xl font-light">&gt;</span>
+            </button>
+            <div class="flex items-center ml-4">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center mr-2">
+                <img src="assets/dollar-icon.png" alt="Coin" class="w-8 h-8">
+              </div>
+              <span class="text-xl font-bold" id="coin-price">250</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+          <div class="mx-auto overflow-hidden mb-8" style="width: 428px;">
+        <div class="relative" style="
+      width: 428px;
+      height: 421px;
+      background-image: url('assets/shops/01KB5V4E0PXPMR5T18VYMXRED4.png');
+      background-color: #171614;
+      background-size: cover;
+      background-position: center;
+      border-bottom: 4px solid #141414;
+      border:3px solid #262423;
+    ">
+        </div>
+        <div class="pt-4 text-white">
+          <h2 class="text-xl font-bold mb-2">Minecraft Shop 1</h2>
+          <p class="text-sm text-gray-400 mb-4" id="card-description-shop">
+            Discover Marketplace content made and updated especially for Vibrant Visuals. Experience the difference with
+            the free Vibrant Adventures world!
+          </p>
+          <hr style="border: none; height: 2px; background-color: #262423; width: 100%; margin: 0.5rem 0;">
+          <div class="flex justify-between items-center">
+            <button id="buynow-button"
+              class="flex items-center justify-center w-3/4 py-3 px-4 rounded-lg text-white font-semibold transition duration-150 cursor-none">
+              BUY NOW
+              <span class="ml-2 text-xl font-light">&gt;</span>
+            </button>
+            <div class="flex items-center ml-4">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center mr-2">
+                <img src="assets/dollar-icon.png" alt="Coin" class="w-8 h-8">
+              </div>
+              <span class="text-xl font-bold" id="coin-price">250</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+          <div class="mx-auto overflow-hidden mb-8" style="width: 428px;">
+        <div class="relative" style="
+      width: 428px;
+      height: 421px;
+      background-image: url('assets/shops/01KB5V4E0PXPMR5T18VYMXRED4.png');
+      background-color: #171614;
+      background-size: cover;
+      background-position: center;
+      border-bottom: 4px solid #141414;
+      border:3px solid #262423;
+    ">
+        </div>
+        <div class="pt-4 text-white">
+          <h2 class="text-xl font-bold mb-2">Minecraft Shop 1</h2>
+          <p class="text-sm text-gray-400 mb-4" id="card-description-shop">
+            Discover Marketplace content made and updated especially for Vibrant Visuals. Experience the difference with
+            the free Vibrant Adventures world!
+          </p>
+          <hr style="border: none; height: 2px; background-color: #262423; width: 100%; margin: 0.5rem 0;">
+          <div class="flex justify-between items-center">
+            <button id="buynow-button"
+              class="flex items-center justify-center w-3/4 py-3 px-4 rounded-lg text-white font-semibold transition duration-150 cursor-none">
+              BUY NOW
+              <span class="ml-2 text-xl font-light">&gt;</span>
+            </button>
+            <div class="flex items-center ml-4">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center mr-2">
+                <img src="assets/dollar-icon.png" alt="Coin" class="w-8 h-8">
+              </div>
+              <span class="text-xl font-bold" id="coin-price">250</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+          <div class="mx-auto overflow-hidden mb-8" style="width: 428px;">
+        <div class="relative" style="
+      width: 428px;
+      height: 421px;
+      background-image: url('assets/shops/01KB5V4E0PXPMR5T18VYMXRED4.png');
+      background-color: #171614;
+      background-size: cover;
+      background-position: center;
+      border-bottom: 4px solid #141414;
+      border:3px solid #262423;
+    ">
+        </div>
+        <div class="pt-4 text-white">
+          <h2 class="text-xl font-bold mb-2">Minecraft Shop 1</h2>
+          <p class="text-sm text-gray-400 mb-4" id="card-description-shop">
+            Discover Marketplace content made and updated especially for Vibrant Visuals. Experience the difference with
+            the free Vibrant Adventures world!
+          </p>
+          <hr style="border: none; height: 2px; background-color: #262423; width: 100%; margin: 0.5rem 0;">
+          <div class="flex justify-between items-center">
+            <button id="buynow-button"
+              class="flex items-center justify-center w-3/4 py-3 px-4 rounded-lg text-white font-semibold transition duration-150 cursor-none">
+              BUY NOW
+              <span class="ml-2 text-xl font-light">&gt;</span>
+            </button>
+            <div class="flex items-center ml-4">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center mr-2">
+                <img src="assets/dollar-icon.png" alt="Coin" class="w-8 h-8">
+              </div>
+              <span class="text-xl font-bold" id="coin-price">250</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+          <div class="mx-auto overflow-hidden mb-8" style="width: 428px;">
+        <div class="relative" style="
+      width: 428px;
+      height: 421px;
+      background-image: url('assets/shops/01KB5V4E0PXPMR5T18VYMXRED4.png');
+      background-color: #171614;
+      background-size: cover;
+      background-position: center;
+      border-bottom: 4px solid #141414;
+      border:3px solid #262423;
+    ">
+        </div>
+        <div class="pt-4 text-white">
+          <h2 class="text-xl font-bold mb-2">Minecraft Shop 1</h2>
+          <p class="text-sm text-gray-400 mb-4" id="card-description-shop">
+            Discover Marketplace content made and updated especially for Vibrant Visuals. Experience the difference with
+            the free Vibrant Adventures world!
+          </p>
+          <hr style="border: none; height: 2px; background-color: #262423; width: 100%; margin: 0.5rem 0;">
+          <div class="flex justify-between items-center">
+            <button id="buynow-button"
+              class="flex items-center justify-center w-3/4 py-3 px-4 rounded-lg text-white font-semibold transition duration-150 cursor-none">
+              BUY NOW
+              <span class="ml-2 text-xl font-light">&gt;</span>
+            </button>
+            <div class="flex items-center ml-4">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center mr-2">
+                <img src="assets/dollar-icon.png" alt="Coin" class="w-8 h-8">
+              </div>
+              <span class="text-xl font-bold" id="coin-price">250</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
   </section>
@@ -151,24 +412,30 @@
       </div>
     </div>
   </section>
+</main>
+
+
+
+
+
 
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-upper">
       <img src="assets/footer-logo.png" alt="Logo" height="36">
       <div class="footer-links ">
-        <span class="hover:scale-125 transition-transform duration-300 cursor-pointer">Product</span>
-        <span class="hover:scale-125 transition-transform duration-300 cursor-pointer">Features</span>
-        <span class="hover:scale-125 transition-transform duration-300 cursor-pointer">Pricing</span>
-        <span class="hover:scale-125 transition-transform duration-300 cursor-pointer">Resources</span>
+        <span class="hover:scale-125 transition-transform duration-300 cursor-none">Product</span>
+        <span class="hover:scale-125 transition-transform duration-300 cursor-none">Features</span>
+        <span class="hover:scale-125 transition-transform duration-300 cursor-none">Pricing</span>
+        <span class="hover:scale-125 transition-transform duration-300 cursor-none">Resources</span>
       </div>
       <div class="footer-socials">
         <img src="assets/discord-logo.png" alt="Discord" height="28" width="28"
-          class="cursor-pointer hover:scale-125 transition-transform duration-300">
+          class="cursor-none hover:scale-125 transition-transform duration-300">
         <img src="assets/ig-logo.png" alt="Instagram" height="28" width="28"
-          class="cursor-pointer hover:scale-125 transition-transform duration-300">
+          class="cursor-none hover:scale-125 transition-transform duration-300">
         <img src="assets/tiktok-logo.png" alt="Tiktok" height="28" width="28"
-          class="cursor-pointer hover:scale-125 transition-transform duration-300">
+          class="cursor-none hover:scale-125 transition-transform duration-300">
       </div>
     </div>
     <div class="footer-lower">
@@ -181,6 +448,26 @@
 
 
 <script>
+
+  const openBtn = document.getElementById('open-playnow-popup');
+  const popup = document.getElementById('playnow-popup');
+
+  openBtn.addEventListener('click', function(e) {
+    e.preventDefault(); // prevent default anchor behavior
+    popup.style.display = 'flex'; // show the popup
+  });
+
+  // Close popup when clicking outside the container
+  popup.addEventListener('click', function(e) {
+    if (e.target === popup) {
+      popup.style.display = 'none';
+    }
+  });
+
+  
+
+
+
   const mainGallery = document.getElementById("main-gallery");
   const thumbnails = document.querySelectorAll("#gallery-1, #gallery-2, #gallery-3");
 
@@ -202,6 +489,22 @@
   window.addEventListener("mousemove", e => {
     cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
   });
+let mouseX = 0, mouseY = 0;
+let cursorX = 0, cursorY = 0;
+
+window.addEventListener("mousemove", e => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+function animateCursor() {
+  cursorX += (mouseX - cursorX) * 0.15;
+  cursorY += (mouseY - cursorY) * 0.15;
+  cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+  requestAnimationFrame(animateCursor);
+}
+
+animateCursor();
 
 
 </script>
