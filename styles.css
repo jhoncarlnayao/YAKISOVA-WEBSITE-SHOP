@@ -11,18 +11,9 @@ body {
 
 
 /* Navbar */
-.navbar {
-  display: flex;
-  align-items: center;
-  background: #262523;
-  height: 80px;
-  padding: 0 102px;
-  justify-content: space-between;
+#navbar {
   box-shadow: 0 2px 2px #0002;
   border-bottom: 5px solid rgba(40, 40, 40, 0.47);
-  position: relative;
-  z-index: 10;
-  
 }
 
 #custom-cursor {
@@ -332,59 +323,52 @@ border-bottom: 5px solid rgba(40, 40, 40, 0.47) inset;
   margin-right: 3px;
 }
 
-/* Vault Section */
+/* =========================
+   Vault Section
+========================= */
 .vault-section {
-  background: #232220;
+  background: #171614;
   border-top: 5px solid #1a1816;
-  padding-top: 38px;
-  padding-bottom: 0;
+  padding: 60px 20px;
 }
 
+/* Container */
 .vault-container {
-  display: flex;
-  align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 38px 0 32px 0;
-  gap: 42px;
+  gap: 48px;
 }
 
+/* Left Content */
 .vault-left {
-  flex: 1 1 60%;
+  flex: 1;
 }
 
 .vault-title {
   font-family: 'Press Start 2P', monospace;
   color: #ffe066;
-  font-size: 50px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -3px;
-  margin: 0 0 12px 0;
+  font-size: clamp(28px, 5vw, 48px);
+  letter-spacing: -2px;
+  margin-bottom: 16px;
 }
 
 .vault-left p {
-  color: #FFF;
-  font-family: "Open Sans";
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-  /* 125% */
-  letter-spacing: 0.16px;
-  width: 388px;
-  margin-bottom: 18px;
+  line-height: 1.6;
+  max-width: 420px;
+  margin-bottom: 24px;
 }
 
+/* Button */
 .vault-btn {
-  /* 1. Base Layout */
   display: inline-block;
-  font-family: 'Open sans', Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   text-decoration: none;
-  margin-top: 7px;
-
 
   background: #FDC32C;
   border-top: 10px solid #FFD953;
@@ -392,19 +376,20 @@ border-bottom: 5px solid rgba(40, 40, 40, 0.47) inset;
   border-left: none;
   border-right: none;
 
-
   color: #000;
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
-  letter-spacing: .05em;
+  letter-spacing: 0.08em;
 
-
-  padding: 5px 100px;
-  border-radius: 0px;
+  padding: 8px 80px;
   cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
 }
 
+.vault-btn:hover {
+  filter: brightness(1.05);
+}
 
 .vault-btn:active {
   border-top-width: 5px;
@@ -412,69 +397,159 @@ border-bottom: 5px solid rgba(40, 40, 40, 0.47) inset;
   transform: translateY(5px);
 }
 
+/* Right Image */
 .vault-right {
-  flex: 1 1 40%;
+  flex: 1;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
 .vault-img {
-  display: block;
-  width: 400px;
-  max-width: 100%;
-  border-radius: 7px;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 10px;
   border: 2px solid #ffe066;
   background: #191919;
-  box-shadow: 0 0 12px #ffe06655;
+  box-shadow: 0 0 18px #ffe06655;
 }
 
-/* Footer */
+/* =========================
+   Responsive Breakpoints
+========================= */
+@media (max-width: 900px) {
+  .vault-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .vault-left p {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .vault-btn {
+    padding: 8px 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vault-btn {
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+/* Footer Base */
 .footer {
   background: #232220;
-  padding-top: 28px;
-  padding-bottom: 32px;
+  padding: 32px 16px;
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
 }
 
+/* Container */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Upper Section */
 .footer-upper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-bottom: 20px;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
+/* Brand */
+.footer-brand img {
+  display: block;
+}
+
+/* Links */
 .footer-links {
   display: flex;
-  gap: 38px;
-  font-family: 'Montserrat', Arial, sans-serif;
-  color: #fff;
+  gap: 32px;
   font-weight: 500;
-  font-size: 1rem;
 }
 
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+  transform: scale(1.15);
+  opacity: 0.9;
+}
+
+/* Socials */
 .footer-socials {
   display: flex;
   gap: 12px;
 }
 
 .footer-socials img {
+  width: 28px;
+  height: 28px;
   background: #191919;
-  border-radius: 16px;
-  padding: 3px;
+  padding: 4px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
+.footer-socials img:hover {
+  transform: scale(1.2);
+}
+
+/* Divider */
+.footer-divider {
+  border: none;
+  border-top: 1px solid #363636;
+  margin: 28px 0 18px;
+}
+
+/* Lower Section */
 .footer-lower {
   text-align: center;
   color: #bdbdbd;
-  margin-top: 34px;
+  font-size: 0.85rem;
 }
 
-.footer-lower hr {
-  border: 1px solid #363636;
-  margin-bottom: 13px;
+.footer-credit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 6px;
 }
+
+/* Pixelated Minecraft Head */
+.pixelated {
+  image-rendering: pixelated;
+}
+
+/* ========================= */
+/* Responsive (Mobile First) */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .footer-upper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
 
 /* Responsive Design */
 @media (max-width: 1100px) {

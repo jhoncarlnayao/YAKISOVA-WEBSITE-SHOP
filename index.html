@@ -20,29 +20,46 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Micro+5&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Silkscreen:wght@400;700&display=swap"
     rel="stylesheet">
    <link rel="icon" type="image/png" sizes="48x48" href="assets/cursor2.png">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-
+<script src="./node_modules/preline/dist/preline.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.js"></script>
 </head>
 
 <body>
   <div id="custom-cursor"></div>
   <!-- Navbar -->
-  <header class="navbar">
-    <div class="navbar-logo">
-      <!-- Logo image here -->
-      <img src="assets/yakisova-logo.png" alt="Logo" height="30">
+<header class="flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-3 dark:bg-neutral-800" id="navbar">
+  <nav class="max-w-[85rem] w-full mx-auto px-4 flex flex-wrap basis-full items-center justify-between">
+    
+    <a class="sm:order-1 flex-none text-xl font-semibold dark:text-white focus:outline-hidden focus:opacity-80" href="#">
+      <img src="assets/yakisova-logo.png" alt="Logo" height="30" class="h-8 w-auto"> 
+    </a>
+    
+    <div class="sm:order-3 flex items-center gap-x-2">
+      <button type="button" class="sm:hidden hs-collapse-toggle relative size-9 flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent dark:border-neutral-700 dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10" id="hs-navbar-alignment-collapse" aria-expanded="false" aria-controls="hs-navbar-alignment" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-alignment">
+        <svg class="hs-collapse-open:hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+        <svg class="hs-collapse-open:block hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        <span class="sr-only">Toggle</span>
+      </button>
+      
+      <a class="buy-now-btn cursor-none py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+        BUY NOW
+      </a>
     </div>
-    <nav class="navbar-links gap-20">
-      <a href="#">SHOP</a>
-      <a href="#">RULES</a>
-      <a href="#">VAULT</a>
-      <a href="#">SUPPORT</a>
-    </nav>
-    <a class="buy-now-btn cursor-none" href="#">BUY NOW</a>
-  </header>
-
+    
+    <div id="hs-navbar-alignment" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:grow-0 sm:basis-auto sm:block sm:order-2" aria-labelledby="hs-navbar-alignment-collapse">
+      <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:ps-5">
+        <a class="font-medium text-blue-500 focus:outline-hidden" href="#" aria-current="page">SHOP</a>
+        <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">RULES</a>
+        <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">VAULT</a>
+        <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">SUPPORT</a>
+      </div>
+    </div>
+    
+  </nav>
+</header>
 
 <main id="content">
 
@@ -398,51 +415,151 @@
     </div>
   </section>
 
-  <!-- Drei's Vault Section -->
-  <section class="vault-section h-[482px]">
-    <div class="vault-container">
-      <div class="vault-left">
-        <h2 class="vault-title">DREI'S VAULT</h2>
-        <p>Discover Marketplace content made and updated especially for Vibrant Visuals. Experience the difference with
-          the free Vibrant Adventures world!</p>
-        <a class="vault-btn" href="#">AVAIL NOW!</a>
-      </div>
-      <div class="vault-right">
-        <img class="vault-img w-screen h-auto" src="assets/drei-vault2.png" alt="Vault Showcase">
-      </div>
+<!-- Drei's Vault Section -->
+<section class="bg-[#171614] relative overflow-hidden">
+    <div class="container flex flex-col items-center px-6 py-20 mx-auto text-center">
+
+        <!-- Title -->
+        <h2
+            class="text-white tracking-[1.5px] drop-shadow-[0_6px_18px_rgba(255,255,255,0.15)]
+                   text-[56px] sm:text-[72px] xl:text-[96px]"
+            style="
+                font-family: 'Micro 5', sans-serif;
+                font-weight: 400;
+                -webkit-text-stroke: 4px #ffffff;
+                line-height: 1;
+            "
+        >
+            ENTER DREI’S VAULT
+        </h2>
+
+        <!-- Divider -->
+        <div class="w-24 h-[2px] bg-violet-400 mt-6 mb-6"></div>
+
+        <!-- Description -->
+        <p
+            class="max-w-xl text-center"
+            style="
+                color: #979797;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0.2px;
+            "
+        >
+            Discover exclusive Marketplace content crafted and maintained specifically for Vibrant Visuals.
+            Step into a premium experience and unlock the free Vibrant Adventures world today.
+        </p>
+
+        <!-- Actions -->
+    <div class="mt-6">
+            <a href="#" class="inline-flex items-center justify-center w-full px-4 py-2.5 overflow-hidden text-sm text-white transition-colors duration-300 bg-gray-900 rounded-lg  sm:w-auto sm:mx-2 hover:bg-gray-700 bg-transparent dark:hover:bg-violet-500 focus:ring focus:ring-gray-300 focus:ring-opacity-80 cursor-none">
+                <svg class="w-5 h-5 mx-2 fill-current" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M407,0H105C47.103,0,0,47.103,0,105v302c0,57.897,47.103,105,105,105h302c57.897,0,105-47.103,105-105V105C512,47.103,464.897,0,407,0z M482,407c0,41.355-33.645,75-75,75H105c-41.355,0-75-33.645-75-75V105c0-41.355,33.645-75,75-75h302c41.355,0,75,33.645,75,75V407z"></path>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M305.646,123.531c-1.729-6.45-5.865-11.842-11.648-15.18c-11.936-6.892-27.256-2.789-34.15,9.151L256,124.166l-3.848-6.665c-6.893-11.937-22.212-16.042-34.15-9.151h-0.001c-11.938,6.893-16.042,22.212-9.15,34.151l18.281,31.664L159.678,291H110.5c-13.785,0-25,11.215-25,25c0,13.785,11.215,25,25,25h189.86l-28.868-50h-54.079l85.735-148.498C306.487,136.719,307.375,129.981,305.646,123.531z"></path>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M401.5,291h-49.178l-55.907-96.834l-28.867,50l86.804,150.348c3.339,5.784,8.729,9.921,15.181,11.65c2.154,0.577,4.339,0.863,6.511,0.863c4.332,0,8.608-1.136,12.461-3.361c11.938-6.893,16.042-22.213,9.149-34.15L381.189,341H401.5c13.785,0,25-11.215,25-25C426.5,302.215,415.285,291,401.5,291z"></path>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M119.264,361l-4.917,8.516c-6.892,11.938-2.787,27.258,9.151,34.15c3.927,2.267,8.219,3.345,12.458,3.344c8.646,0,17.067-4.484,21.693-12.495L176.999,361H119.264z"></path>
+                        </g>
+                    </g>
+                </svg>
+
+                <span class="mx-2">
+                    Get it on the App Store
+                </span>
+            </a>
+
+            <a href="#"
+                class="inline-flex items-center justify-center w-full px-4 py-2.5 mt-4 overflow-hidden text-sm text-white transition-colors duration-300 bg-violet-500 rounded-lg shadow sm:w-auto sm:mx-2 sm:mt-0 hover:bg-violet-400 focus:ring focus:ring-blue-300 focus:ring-opacity-80 cursor-none">
+                <svg class="w-5 h-5 mx-2 fill-current" viewBox="-28 0 512 512.00075" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m432.320312 215.121094-361.515624-208.722656c-14.777344-8.53125-32.421876-8.53125-47.203126 0-.121093.070312-.230468.148437-.351562.21875-.210938.125-.421875.253906-.628906.390624-14.175782 8.636719-22.621094 23.59375-22.621094 40.269532v417.445312c0 17.066406 8.824219 32.347656 23.601562 40.878906 7.390626 4.265626 15.496094 6.398438 23.601563 6.398438s16.214844-2.132812 23.601563-6.398438l361.519531-208.722656c14.777343-8.53125 23.601562-23.8125 23.601562-40.878906s-8.824219-32.347656-23.605469-40.878906zm-401.941406 253.152344c-.21875-1.097657-.351562-2.273438-.351562-3.550782v-417.445312c0-2.246094.378906-4.203125.984375-5.90625l204.324219 213.121094zm43.824219-425.242188 234.21875 135.226562-52.285156 54.539063zm-6.480469 429.679688 188.410156-196.527344 54.152344 56.484375zm349.585938-201.835938-80.25 46.332031-60.125-62.714843 58.261718-60.773438 82.113282 47.40625c7.75 4.476562 8.589844 11.894531 8.589844 14.875s-.839844 10.398438-8.589844 14.875zm0 0">
+                    </path>
+                </svg>
+
+                <span class="mx-2">
+                    Get it on Google Play
+                </span>
+            </a>
+        </div>
+
     </div>
-  </section>
+</section>
+
+
+
 </main>
 
 
 
 
-
-
   <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-upper">
-      <img src="assets/footer-logo.png" alt="Logo" height="36">
-      <div class="footer-links ">
-        <span class="hover:scale-125 transition-transform duration-300 cursor-none">Product</span>
-        <span class="hover:scale-125 transition-transform duration-300 cursor-none">Features</span>
-        <span class="hover:scale-125 transition-transform duration-300 cursor-none">Pricing</span>
-        <span class="hover:scale-125 transition-transform duration-300 cursor-none">Resources</span>
+   <footer class="bg-#171614">
+  <div class="container flex flex-col p-6 mx-auto space-y-6">
+
+    <div class="flex flex-col items-center justify-between sm:flex-row sm:space-y-0 space-y-4">
+
+      <div class="footer-brand">
+        <img src="assets/footer-logo.png" alt="Fujin Logo" height="36" class="h-9 w-auto"> 
       </div>
-      <div class="footer-socials">
-        <img src="assets/discord-logo.png" alt="Discord" height="28" width="28"
-          class="cursor-none hover:scale-125 transition-transform duration-300">
-        <img src="assets/ig-logo.png" alt="Instagram" height="28" width="28"
-          class="cursor-none hover:scale-125 transition-transform duration-300">
-        <img src="assets/tiktok-logo.png" alt="Tiktok" height="28" width="28"
-          class="cursor-none hover:scale-125 transition-transform duration-300">
+
+      <nav class="flex flex-wrap justify-center gap-6 text-sm font-medium text-gray-600 dark:text-gray-300">
+        <a href="#" class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300">Product</a>
+        <a href="#" class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300">Features</a>
+        <a href="#" class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300">Pricing</a>
+        <a href="#" class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300">Resources</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <a href="#" class="w-6 h-6">
+          <img src="assets/discord-logo.png" alt="Discord" class="w-full h-full object-contain">
+        </a>
+        <a href="#" class="w-6 h-6">
+          <img src="assets/ig-logo.png" alt="Instagram" class="w-full h-full object-contain">
+        </a>
+        <a href="#" class="w-6 h-6">
+          <img src="assets/tiktok-logo.png" alt="Tiktok" class="w-full h-full object-contain">
+        </a>
       </div>
+
     </div>
-    <div class="footer-lower">
-      <hr class="w-[1166.4px] justify-self-center">
-      <p>&copy; Copyright 2025, All Rights Reserved by<br>@Fujin.dev</p>
+
+    <hr class="border-gray-200 dark:border-gray-700">
+
+    <div class="flex flex-col items-center justify-between space-y-3 sm:flex-row sm:space-y-0">
+      
+      <p class="text-sm text-gray-600 dark:text-gray-300">
+        &copy; 2025 All Rights Reserved
+      </p>
+
+      <p class="flex items-center text-sm text-gray-600 dark:text-gray-300 space-x-2">
+        <img
+          src="https://mc-heads.net/avatar/Chimuelo_22/24"
+          alt="Minecraft Head"
+          class="pixelated h-6 w-6 rounded-full"
+        >
+        <span class="font-semibold text-gray-800 dark:text-white">@Fujin.dev</span>
+      </p>
+
     </div>
-  </footer>
+
+  </div>
+</footer>
+
+
 </body>
 
 
