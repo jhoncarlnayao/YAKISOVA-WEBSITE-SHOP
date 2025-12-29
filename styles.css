@@ -54,27 +54,31 @@ gap:20px;
   color: #e960ff;
 }
 
+
 .buy-now-btn {
- border: 1px solid #B060B4;
-background: rgba(217, 217, 217, 0.00);
-  color: #fff;
-  padding: 7px 20px;
-  border-radius: 3px;
- color: #B060B4;
-font-family: "Segoe UI";
-font-size: 18px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-letter-spacing: 0.18px;
-cursor: none;
-  transition: background 0.1s, color 0.1s;
+  display: inline-block;
+  font-family: 'Open sans', Arial, sans-serif;
+  text-decoration: none;
+  margin-top: 7px;
+  background: #732377;
+  border-top: 4px solid #B060B4;
+  border-bottom: 4px solid #631C64;
+  border-left: none;
+  border-right: none;
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  padding: 3px 15px;
+  border-radius: 0px;
+  cursor: none;
+  color: white;
+  transition: all 0.4s ease-in-out;
 }
 
-.buy-now-btn:hover {
-  background: #e960ff;
-  color: #111;
-}
+/* .buy-now-btn:hover {
+  transform: scale(1.1);
+} */
 
 /* Hero Section */
 .hero-section {
@@ -788,6 +792,6 @@ width: 400px;
   }
 
 
-
+/*  */
 
 }
