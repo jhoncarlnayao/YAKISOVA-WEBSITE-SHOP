@@ -793,5 +793,16 @@ width: 400px;
 
 
 /*  */
-
+/* Global vertical rhythm */
+.section {
+  padding-top: 155px;
+  padding-bottom: 155px;
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
