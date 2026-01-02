@@ -653,11 +653,16 @@ border-bottom: 5px solid rgba(40, 40, 40, 0.47) inset;
   z-index: 1000;
 }
 
-.container-playnow-pop{
+.container-playnow-pop {
   width: 1041px;
-height: 458px;
-background: #EDE5E2;
+  max-width: 90vw;          /* prevents overflow on small screens */
+  height: 458px;
+  max-height: 90vh;         /* keeps it vertically centered */
+  background: #EDE5E2;
+  display: flex;
+  flex-direction: column;
 }
+
 
 .title-container{
     background: #D0C5C0;
