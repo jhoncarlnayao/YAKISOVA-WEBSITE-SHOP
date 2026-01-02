@@ -27,14 +27,91 @@
   <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.js"></script>
 </head>
 <style>
-  [x-cloak] { display: none !important; }
+  [x-cloak] {
+    display: none !important;
+  }
 </style>
+
 <body class="cursor-none">
 
 
-<div id="custom-cursor" style="pointer-events:none;"></div>
+  <div id="custom-cursor" ></div>
   <!-- Navbar -->
 
+<header x-data="{ isOpen: false }"
+  class="bg-[#1f1e1c] border-b border-[#262423] text-sm w-full relative overflow-hidden">
+
+  <nav class="max-w-[85rem] w-full mx-auto px-4 py-3 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="#" class="flex-none">
+      <img src="assets/yakisova-logo.png" alt="Logo" class="h-8 w-auto">
+    </a>
+
+    <!-- Mobile menu button -->
+    <div class="flex lg:hidden">
+      <button
+        @click="isOpen = !isOpen"
+        class="text-gray-200 hover:text-violet-400 focus:outline-none"
+        aria-label="Toggle menu"
+      >
+        <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 8h16M4 16h16" />
+        </svg>
+
+        <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menu -->
+   <div
+  x-cloak
+  x-show="isOpen || window.innerWidth >= 1024"
+  x-transition
+  class="absolute lg:static inset-x-0 top-full z-30
+         w-full lg:w-auto
+         bg-[#1f1e1c] lg:bg-transparent
+         px-4 py-6 lg:p-0
+         lg:flex lg:items-center">
+
+
+      <!-- Links -->
+      <div class="flex flex-col lg:flex-row gap-4 lg:gap-6 cursor-none">
+        <a href="#shop" class="text-violet-500 font-medium hover:text-violet-400 cursor-none">Shop</a>
+        <a href="#vault" class="text-gray-400 font-medium hover:text-violet-400 cursor-none">Vault</a>
+        <a href="#about" class="text-gray-400 font-medium hover:text-violet-400 cursor-none">About</a>
+      </div>
+
+      <!-- Buy Now (mobile inside menu) -->
+      <div class="mt-6 lg:hidden">
+        <a href="#"
+          class="cursor-none w-full py-2 px-4 inline-flex justify-center
+                 text-sm font-medium rounded-lg 
+                 bg-[#1f1e1c] text-white hover:bg-[#262423]">
+        </a>
+      </div>
+    </div>
+
+    <!-- Buy Now (desktop) -->
+    <div class="hidden lg:flex items-center gap-x-2">
+      <a href="#"
+        class="cursor-none py-2 px-4 inline-flex items-center gap-x-2
+               text-sm font-medium rounded-lg 
+               bg-[#1f1e1c] text-white hover:bg-[#262423]">
+
+      </a>
+    </div>
+
+  </nav>
+</header>
 
 
 
@@ -55,8 +132,9 @@
             <h2>Enter the World of Yakisova</h2>
 
             <p class="mt-3 max-w-md">
-              Uncover a Minecraft realm filled with custom systems, handcrafted environments, and ongoing expansions.<br>
-Begin your story with a free adventure world and shape your path as Yakisova evolves.
+              Uncover a Minecraft realm filled with custom systems, handcrafted environments, and ongoing
+              expansions.<br>
+              Begin your story with a free adventure world and shape your path as Yakisova evolves.
             </p>
 
             <div class="hero-buttons-row flex items-center gap-6 mt-6">
@@ -65,25 +143,22 @@ Begin your story with a free adventure world and shape your path as Yakisova evo
               </a>
 
 
-             <div class="hero-socials flex items-center gap-4">
-  <a href="https://discord.gg/yakisova" target="_blank" rel="noopener noreferrer">
-    <img src="assets/discord-logo.png" alt="Discord"
-      height="28" width="28"
-      class="cursor-none hover:scale-125 transition-transform duration-300">
-  </a>
+              <div class="hero-socials flex items-center gap-4">
+                <a href="https://discord.gg/yakisova" target="_blank" rel="noopener noreferrer">
+                  <img src="assets/discord-logo.png" alt="Discord" height="28" width="28"
+                    class="cursor-none hover:scale-125 transition-transform duration-300">
+                </a>
 
-  <a href="https://www.instagram.com/yakisovasmp/" target="_blank" rel="noopener noreferrer">
-    <img src="assets/ig-logo.png" alt="Instagram"
-      height="28" width="28"
-      class="cursor-none hover:scale-125 transition-transform duration-300">
-  </a>
+                <a href="https://www.instagram.com/yakisovasmp/" target="_blank" rel="noopener noreferrer">
+                  <img src="assets/ig-logo.png" alt="Instagram" height="28" width="28"
+                    class="cursor-none hover:scale-125 transition-transform duration-300">
+                </a>
 
-  <a href="https://www.tiktok.com/@dreiwhitee" target="_blank" rel="noopener noreferrer">
-    <img src="assets/tiktok-logo.png" alt="TikTok"
-      height="28" width="28"
-      class="cursor-none hover:scale-125 transition-transform duration-300">
-  </a>
-</div>
+                <a href="https://www.tiktok.com/@dreiwhitee" target="_blank" rel="noopener noreferrer">
+                  <img src="assets/tiktok-logo.png" alt="TikTok" height="28" width="28"
+                    class="cursor-none hover:scale-125 transition-transform duration-300">
+                </a>
+              </div>
 
             </div>
           </div>
@@ -164,50 +239,85 @@ Begin your story with a free adventure world and shape your path as Yakisova evo
       </div>
 
 
-   <div class="playnow-popup" id="playnow-popup">
-  <div class="container-playnow-pop">
-    <div class="title-container">
-      <h1>JOIN YAKISOVA NOW</h1>
-    </div>
+      <div class="playnow-popup" id="playnow-popup">
+        <div class="container-playnow-pop">
+          <div class="title-container">
+            <h1>JOIN YAKISOVA NOW</h1>
+          </div>
 
-    <div class="2boxes-container">
-      <div class="box-1">
+          <div class="2boxes-container">
+            <div class="box-1">
 
-        <!-- PLAY NOW (Copy IP) -->
-        <a
-          class="hero-ipaddress-btn cursor-none"
-          href="#"
-          id="copy-ip-btn">
-          PLAY NOW
-        </a>
+              <!-- PLAY NOW (Copy IP) -->
+              <a class="hero-ipaddress-btn cursor-none" href="#" id="copy-ip-btn">
+                PLAY NOW
+              </a>
 
-        <!-- DISCORD -->
-        <a
-          class="hero-signup-btn cursor-none"
-          href="https://discord.gg/yakisova"
-          target="_blank"
-          rel="noopener noreferrer">
-          JOIN DISCORD
-        </a>
+              <!-- DISCORD -->
+              <a class="hero-signup-btn cursor-none" href="https://discord.gg/yakisova" target="_blank"
+                rel="noopener noreferrer">
+                JOIN DISCORD
+              </a>
 
-        <!-- Hidden IP -->
-        <span id="minecraft-ip" style="display:none;">
-          play.yakisova.net
-        </span>
+              <!-- Hidden IP -->
+              <span id="minecraft-ip" style="display:none;">
+                play.yakisova.net
+              </span>
 
-        <div class="bg-[#E3E3E3] w-[460px] h-[2px]"></div>
+              <div class="bg-[#E3E3E3] w-[460px] h-[2px]"></div>
 
-     <p>
-  Join Yakisova — a community-driven Minecraft server featuring custom content,
-  balanced gameplay, and ongoing updates crafted for long-term adventure.
-</p>
+              <p>
+                Join Yakisova — a community-driven Minecraft server featuring custom content,
+                balanced gameplay, and ongoing updates crafted for long-term adventure.
+              </p>
 
 
+            </div>
+          </div>
+        </div>
       </div>
+
+
+  <div id="playnowhero-section" class="fixed inset-0 z-[999] flex items-center justify-center hidden"
+     role="dialog" aria-modal="true">
+  <!-- Backdrop -->
+  <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" id="playnow-backdrop"></div>
+
+  <!-- Modal Card -->
+  <div class="relative w-[520px] bg-[#1f1e1c] border border-[#262423] p-8 text-center rounded-lg shadow-lg">
+    <button id="close-playnow" class="absolute top-4 right-4 text-white text-xl hover:text-violet-400 cursor-pointer">
+      ✕
+    </button>
+
+    <!-- Discord Link Input -->
+    <div class="flex items-center gap-2 mt-6">
+      <input type="text" readonly value="https://discord.gg/yakisova"
+             class="flex-1 h-10 px-4 text-sm text-gray-200 bg-[#262423] border border-[#262423] rounded-md focus:outline-none focus:ring-2 focus:ring-violet-500" />
+      <a onclick="navigator.clipboard.writeText('https://discord.gg/yakisova')"
+         class="px-3 py-2 text-white border border-[#262423] rounded-md hover:bg-[#262423] transition"
+         href="https://discord.gg/yakisova">
+        Join Discord
+      </a>
     </div>
+
+    <!-- Minecraft Server IP Input -->
+    <div class="flex items-center gap-2 mt-4">
+      <input type="text" readonly value="yakisova.net"
+             class="flex-1 h-10 px-4 text-sm text-gray-200 bg-[#262423] border border-[#262423] rounded-md focus:outline-none focus:ring-2 focus:ring-violet-500" />
+      <button onclick="navigator.clipboard.writeText('yakisova.net')"
+              class="px-3 py-2 text-white border border-[#262423] rounded-md hover:bg-[#262423] transition">
+        Copy
+      </button>
+    </div>
+
+    <!-- Confirm Button -->
+    <button id="confirm-playnow"
+            class="mt-6 w-full py-3 border border-[#262423] text-white hover:bg-[#262423] transition cursor-pointer rounded-md">
+      CONFIRM
+    </button>
   </div>
 </div>
-
+      
     </section>
 
 
@@ -215,96 +325,21 @@ Begin your story with a free adventure world and shape your path as Yakisova evo
 
 
 
-<div x-data="{ isOpen: false }">
-  <!-- Shop Section -->
-<section class="shop-section section" id="shop">
+    <div x-data="{ isOpen: false }">
+      <!-- Shop Section -->
+      <section class="shop-section section" id="shop">
 
-    <div class="shop-title">
-     <h1>DISCOVER OUR SHOP</h1>
-<p class="justify-self-center">
-  Customize your character with exclusive in-game cosmetics designed to enhance
-  style and expression—no gameplay advantages, just pure visual flair.
-</p>
-
-    </div>
-    <div class="shop-grid">
-      <div class="mx-auto overflow-hidden mb-8" style="width: 428px;">
-        <div class="relative" style="
-          width: 428px;
-          height: 421px;
-          background-image: url('assets/shops/shop1.png');
-          background-color: #171614;
-          background-size: cover;
-          background-position: center;
-          border-bottom: 4px solid #141414;
-          border:3px solid #262423;
-        "></div>
-        <div class="pt-4 text-white">
-          <h2 class="text-xl font-bold mb-2">Gangster Costume</h2>
-          <p class="text-sm text-gray-400 mb-4" id="card-description-shop">
-           Dominate the Minecraft world with the Imperial Drake Goat Armaments! This cosmetic set delivers maximum menace with a striking black and gold design, featuring intricate, imposing weaponry.
+        <div class="shop-title">
+          <h1>DISCOVER OUR SHOP</h1>
+          <p class="justify-self-center">
+            Customize your character with exclusive in-game cosmetics designed to enhance
+            style and expression—no gameplay advantages, just pure visual flair.
           </p>
-          <hr style="border: none; height: 2px; background-color: #262423; width: 100%; margin: 0.5rem 0;">
-          <div class="flex justify-between items-center">
-          <button
-    @click="isOpen = true"
-    class="buy-now-btn w-3/4">
-    BUY NOW
-    <span class="ml-2 text-xl font-light">&gt;</span>
-</button>
 
-            <div class="flex items-center ml-4">
-              <div class="w-8 h-8 rounded-full flex items-center justify-center mr-2">
-                <img src="assets/dollar-icon.png" alt="Coin" class="w-8 h-8">
-              </div>
-              <span class="text-xl font-bold" id="coin-price">75</span>
-            </div>
-          </div>
         </div>
-      </div>
-
-      <!-- Repeat other shop cards similarly -->
-
-        <div class="mx-auto overflow-hidden mb-8" style="width: 428px;">
-        <div class="relative" style="
-          width: 428px;
-          height: 421px;
-          background-image: url('assets/shops/shop2.png');
-          background-color: #171614;
-          background-size: cover;
-          background-position: center;
-          border-bottom: 4px solid #141414;
-          border:3px solid #262423;
-        "></div>
-        <div class="pt-4 text-white">
-          <h2 class="text-xl font-bold mb-2">Little Axolotl</h2>
-          <p class="text-sm text-gray-400 mb-4" id="card-description-shop">
-           Dive into your next adventure with the adorable Little Axolotl animated cosmetic! Transform your character into the cutest amphibian in the overworld.
-
-This vibrant pink armor set, featuring detailed gills and tail, makes exploring, mining, and crafting extra fun. Waddle your way to victory!
-          </p>
-          <hr style="border: none; height: 2px; background-color: #262423; width: 100%; margin: 0.5rem 0;">
-          <div class="flex justify-between items-center">
-          <button
-    @click="isOpen = true"
-    class="buy-now-btn w-3/4">
-    BUY NOW
-    <span class="ml-2 text-xl font-light">&gt;</span>
-</button>
-
-            <div class="flex items-center ml-4">
-              <div class="w-8 h-8 rounded-full flex items-center justify-center mr-2">
-                <img src="assets/dollar-icon.png" alt="Coin" class="w-8 h-8">
-              </div>
-              <span class="text-xl font-bold" id="coin-price">75</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-        <div class="mx-auto overflow-hidden mb-8" style="width: 428px;">
-        <div class="relative" style="
+        <div class="shop-grid">
+          <div class="mx-auto overflow-hidden mb-8" style="width: 428px;">
+            <div class="relative" style="
           width: 428px;
           height: 421px;
           background-image: url('assets/shops/shop3.png');
@@ -314,164 +349,213 @@ This vibrant pink armor set, featuring detailed gills and tail, makes exploring,
           border-bottom: 4px solid #141414;
           border:3px solid #262423;
         "></div>
-        <div class="pt-4 text-white">
-          <h2 class="text-xl font-bold mb-2">Imperial Drakegoat Armaments </h2>
-          <p class="text-sm text-gray-400 mb-4" id="card-description-shop">
-            This Imperial Drakegoat Armaments Gangster Costume set lets you choose your crime role: the fierce, red-horned Enforcer or the silent, fedora-wearing Boss. It's the ultimate blend of dark style and criminal class for your adventures.
-          </p>
-          <hr style="border: none; height: 2px; background-color: #262423; width: 100%; margin: 0.5rem 0;">
-          <div class="flex justify-between items-center">
-          <button
-    @click="isOpen = true"
-    class="buy-now-btn w-3/4">
-    BUY NOW
-    <span class="ml-2 text-xl font-light">&gt;</span>
-</button>
+            <div class="pt-4 text-white">
+              <h2 class="text-xl font-bold mb-2">Gangster Costume</h2>
+              <p class="text-sm text-gray-400 mb-4" id="card-description-shop">
+                Dominate the Minecraft world with the Imperial Drake Goat Armaments! This cosmetic set delivers maximum
+                menace with a striking black and gold design, featuring intricate, imposing weaponry.
+              </p>
+              <hr style="border: none; height: 2px; background-color: #262423; width: 100%; margin: 0.5rem 0;">
+              <div class="flex justify-between items-center">
+                <button @click="isOpen = true" class="buy-now-btn w-3/4">
+                  BUY NOW
+                  <span class="ml-2 text-xl font-light">&gt;</span>
+                </button>
 
-            <div class="flex items-center ml-4">
-              <div class="w-8 h-8 rounded-full flex items-center justify-center mr-2">
-                <img src="assets/dollar-icon.png" alt="Coin" class="w-8 h-8">
+                <div class="flex items-center ml-4">
+                  <div class="w-8 h-8 rounded-full flex items-center justify-center mr-2">
+                    <img src="assets/dollar-icon.png" alt="Coin" class="w-8 h-8">
+                  </div>
+                  <span class="text-xl font-bold" id="coin-price">75</span>
+                </div>
               </div>
-              <span class="text-xl font-bold" id="coin-price">75</span>
+            </div>
+          </div>
+
+          <!-- Repeat other shop cards similarly -->
+
+          <div class="mx-auto overflow-hidden mb-8" style="width: 428px;">
+            <div class="relative" style="
+          width: 428px;
+          height: 421px;
+          background-image: url('assets/shops/shop2.png');
+          background-color: #171614;
+          background-size: cover;
+          background-position: center;
+          border-bottom: 4px solid #141414;
+          border:3px solid #262423;
+        "></div>
+            <div class="pt-4 text-white">
+              <h2 class="text-xl font-bold mb-2">Little Axolotl</h2>
+              <p class="text-sm text-gray-400 mb-4" id="card-description-shop">
+                Dive into your next adventure with the adorable Little Axolotl animated cosmetic! Transform your
+                character into the cutest amphibian in the overworld.
+
+                This vibrant pink armor set, featuring detailed gills and tail, makes exploring, mining, and crafting
+                extra fun. Waddle your way to victory!
+              </p>
+              <hr style="border: none; height: 2px; background-color: #262423; width: 100%; margin: 0.5rem 0;">
+              <div class="flex justify-between items-center">
+                <button @click="isOpen = true" class="buy-now-btn w-3/4">
+                  BUY NOW
+                  <span class="ml-2 text-xl font-light">&gt;</span>
+                </button>
+
+                <div class="flex items-center ml-4">
+                  <div class="w-8 h-8 rounded-full flex items-center justify-center mr-2">
+                    <img src="assets/dollar-icon.png" alt="Coin" class="w-8 h-8">
+                  </div>
+                  <span class="text-xl font-bold" id="coin-price">75</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="mx-auto overflow-hidden mb-8" style="width: 428px;">
+            <div class="relative" style="
+          width: 428px;
+          height: 421px;
+          background-image: url('assets/shops/shop1.png');
+          background-color: #171614;
+          background-size: cover;
+          background-position: center;
+          border-bottom: 4px solid #141414;
+          border:3px solid #262423;
+        "></div>
+            <div class="pt-4 text-white">
+              <h2 class="text-xl font-bold mb-2">Imperial Drakegoat Armaments </h2>
+              <p class="text-sm text-gray-400 mb-4" id="card-description-shop">
+                This Imperial Drakegoat Armaments Gangster Costume set lets you choose your crime role: the fierce,
+                red-horned Enforcer or the silent, fedora-wearing Boss. It's the ultimate blend of dark style and
+                criminal class for your adventures.
+              </p>
+              <hr style="border: none; height: 2px; background-color: #262423; width: 100%; margin: 0.5rem 0;">
+              <div class="flex justify-between items-center">
+                <button @click="isOpen = true" class="buy-now-btn w-3/4">
+                  BUY NOW
+                  <span class="ml-2 text-xl font-light">&gt;</span>
+                </button>
+
+                <div class="flex items-center ml-4">
+                  <div class="w-8 h-8 rounded-full flex items-center justify-center mr-2">
+                    <img src="assets/dollar-icon.png" alt="Coin" class="w-8 h-8">
+                  </div>
+                  <span class="text-xl font-bold" id="coin-price">75</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </section>
+
+      <!-- MODAL -->
+      <div x-show="isOpen" x-transition.opacity class="fixed inset-0 z-[999] flex items-center justify-center"
+        role="dialog" aria-modal="true">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" @click="isOpen = false">
+        </div>
+
+        <!-- Modal Card -->
+        <div x-transition:enter="transition duration-300 ease-out" x-transition:enter-start="scale-95 opacity-0"
+          x-transition:enter-end="scale-100 opacity-100" x-transition:leave="transition duration-200 ease-in"
+          x-transition:leave-start="scale-100 opacity-100" x-transition:leave-end="scale-95 opacity-0"
+          class="relative w-[520px] bg-[#1f1e1c] border border-[#262423] p-8 text-center rounded-lg shadow-lg">
+          <button @click="isOpen = false"
+            class="absolute top-4 right-4 text-white text-xl hover:text-violet-400 cursor-pointer">
+            ✕
+          </button>
+
+          <h2 class="text-white text-3xl sm:text-[42px] font-bold"
+            style="font-family:'Micro 5'; -webkit-text-stroke:1px #ffffff;">
+            CONFIRM PURCHASE
+          </h2>
+
+          <p class="mt-4 text-gray-400 text-sm">
+            You are about to purchase.
+          </p>
+
+          <div class="flex justify-center items-center gap-2 mt-4">
+            <img src="assets/dollar-icon.png" class="w-8 h-8">
+            <span class="text-2xl font-bold text-white">75</span>
+          </div>
+
+          <!-- Purchase Instructions -->
+          <div class="mt-6 p-4 bg-[#262423] border border-[#262423] rounded-md text-left">
+            <h3 class="text-white text-sm font-semibold mb-2">
+              Instructions After Purchase
+            </h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              After buying, please join our Discord server using the link below.
+              Once inside, create a ticket under
+              <span class="text-white font-semibold">#ticket</span>
+              and provide your purchase details so we can process your order.
+            </p>
+          </div>
+
+          <!-- Discord Link Input -->
+          <div class="flex items-center gap-2 mt-6">
+            <input type="text" readonly value="https://discord.gg/yakisova"
+              class="flex-1 h-10 px-4 text-sm text-gray-200 bg-[#262423] border border-[#262423] rounded-md focus:outline-none focus:ring-2 focus:ring-violet-500" />
+            <a @click="navigator.clipboard.writeText('https://discord.gg/yakisova')"
+              class="px-3 py-2 text-white border border-[#262423] rounded-md hover:bg-[#262423] transition"
+              href="https://discord.gg/yakisova">
+
+              Join Discord
+            </a>
+          </div>
+
+          <!-- Minecraft Server IP Input -->
+          <div class="flex items-center gap-2 mt-4">
+            <input type="text" readonly value="yakisova.net"
+              class="flex-1 h-10 px-4 text-sm text-gray-200 bg-[#262423] border border-[#262423] rounded-md focus:outline-none focus:ring-2 focus:ring-violet-500" />
+            <button @click="navigator.clipboard.writeText('yakisova.net')"
+              class="px-3 py-2 text-white border border-[#262423] rounded-md hover:bg-[#262423] transition">
+              Copy
+            </button>
+          </div>
+
+          <!-- Confirm Button -->
+          <button @click="isOpen = false"
+            class="mt-6 w-full py-3 border border-[#262423] text-white hover:bg-[#262423] transition cursor-pointer rounded-md">
+            CONFIRM
+          </button>
+        </div>
+
       </div>
+
     </div>
-  </section>
-
-  <!-- MODAL -->
-<div
-  x-show="isOpen"
-  x-transition.opacity
-  class="fixed inset-0 z-[999] flex items-center justify-center"
-  role="dialog"
-  aria-modal="true"
->
-  <!-- Backdrop -->
-  <div
-    class="absolute inset-0 bg-black/70 backdrop-blur-sm"
-    @click="isOpen = false">
-  </div>
-
-<!-- Modal Card -->
-<div
-  x-transition:enter="transition duration-300 ease-out"
-  x-transition:enter-start="scale-95 opacity-0"
-  x-transition:enter-end="scale-100 opacity-100"
-  x-transition:leave="transition duration-200 ease-in"
-  x-transition:leave-start="scale-100 opacity-100"
-  x-transition:leave-end="scale-95 opacity-0"
-  class="relative w-[520px] bg-[#1f1e1c] border border-[#262423] p-8 text-center rounded-lg shadow-lg"
->
-  <button
-    @click="isOpen = false"
-    class="absolute top-4 right-4 text-white text-xl hover:text-violet-400 cursor-pointer">
-    ✕
-  </button>
-
-  <h2
-    class="text-white text-3xl sm:text-[42px] font-bold"
-    style="font-family:'Micro 5'; -webkit-text-stroke:1px #ffffff;">
-    CONFIRM PURCHASE
-  </h2>
-
-  <p class="mt-4 text-gray-400 text-sm">
-    You are about to purchase.
-  </p>
-
-  <div class="flex justify-center items-center gap-2 mt-4">
-    <img src="assets/dollar-icon.png" class="w-8 h-8">
-    <span class="text-2xl font-bold text-white">75</span>
-  </div>
-
-  <!-- Purchase Instructions -->
-  <div class="mt-6 p-4 bg-[#262423] border border-[#262423] rounded-md text-left">
-    <h3 class="text-white text-sm font-semibold mb-2">
-      Instructions After Purchase
-    </h3>
-    <p class="text-gray-400 text-sm leading-relaxed">
-      After buying, please join our Discord server using the link below.
-      Once inside, create a ticket under
-      <span class="text-white font-semibold">#ticket</span>
-      and provide your purchase details so we can process your order.
-    </p>
-  </div>
-
-  <!-- Discord Link Input -->
-  <div class="flex items-center gap-2 mt-6">
-    <input
-      type="text"
-      readonly
-      value="https://discord.gg/yakisova"
-      class="flex-1 h-10 px-4 text-sm text-gray-200 bg-[#262423] border border-[#262423] rounded-md focus:outline-none focus:ring-2 focus:ring-violet-500"
-    />
-    <a
-      @click="navigator.clipboard.writeText('https://discord.gg/yakisova')"
-      class="px-3 py-2 text-white border border-[#262423] rounded-md hover:bg-[#262423] transition"
-      href="https://discord.gg/yakisova">
-      
-      Join Discord
-    </a>
-  </div>
-
-  <!-- Minecraft Server IP Input -->
-  <div class="flex items-center gap-2 mt-4">
-    <input
-      type="text"
-      readonly
-      value="yakisova.net"
-      class="flex-1 h-10 px-4 text-sm text-gray-200 bg-[#262423] border border-[#262423] rounded-md focus:outline-none focus:ring-2 focus:ring-violet-500"
-    />
-    <button
-      @click="navigator.clipboard.writeText('yakisova.net')"
-      class="px-3 py-2 text-white border border-[#262423] rounded-md hover:bg-[#262423] transition">
-      Copy
-    </button>
-  </div>
-
-  <!-- Confirm Button -->
-  <button
-    @click="isOpen = false"
-    class="mt-6 w-full py-3 border border-[#262423] text-white hover:bg-[#262423] transition cursor-pointer rounded-md">
-    CONFIRM
-  </button>
-</div>
-
-</div>
-
-</div>
 
 
 
-<!-- Drei's Vault Section -->
-<section class="bg-[#171614] relative overflow-hidden section" id="vault">
+    <!-- Drei's Vault Section -->
+    <section class="bg-[#171614] relative overflow-hidden section" id="vault">
 
-  <!-- Background Glow -->
-  <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute top-1/2 left-1/2 w-[600px] h-[600px]
+      <!-- Background Glow -->
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-1/2 left-1/2 w-[600px] h-[600px]
                 bg-[#631C64]/10 blur-[160px] -translate-x-1/2 -translate-y-1/2">
-    </div>
-  </div>
+        </div>
+      </div>
 
-  <div class="container flex flex-col items-center px-6 mx-auto text-center relative z-10">
+      <div class="container flex flex-col items-center px-6 mx-auto text-center relative z-10">
 
-    <!-- Title -->
-    <h2 class="text-white tracking-[1.5px] drop-shadow-[0_6px_18px_rgba(255,255,255,0.15)]
+        <!-- Title -->
+        <h2 class="text-white tracking-[1.5px] drop-shadow-[0_6px_18px_rgba(255,255,255,0.15)]
                text-[56px] sm:text-[72px] xl:text-[96px]" style="
         font-family: 'Micro 5', sans-serif;
         font-weight: 400;
         -webkit-text-stroke: 4px #ffffff;
         line-height: 1;
       ">
-      ENTER DREI’S VAULT
-    </h2>
+          ENTER DREI’S VAULT
+        </h2>
 
-    <!-- Divider -->
-    <div class="w-[200px] h-[2px] bg-[#631C64] mt-6 mb-6"></div>
+        <!-- Divider -->
+        <div class="w-[200px] h-[2px] bg-[#631C64] mt-6 mb-6"></div>
 
-    <!-- Description -->
-    <p class="max-w-xl text-center" style="
+        <!-- Description -->
+        <p class="max-w-xl text-center" style="
         color: #979797;
         font-family: 'Open Sans', sans-serif;
         font-size: 13px;
@@ -479,70 +563,72 @@ This vibrant pink armor set, featuring detailed gills and tail, makes exploring,
         line-height: 20px;
         letter-spacing: 0.2px;
       ">
-      Drei’s Vault is the official Discord community for Minecraft server owners and players seeking reliable support and exclusive content. Join to get help with server setup, plugins, and troubleshooting, access curated Vibrant Visuals Marketplace releases, and unlock the free Vibrant Adventures world. Everything you need to build, manage, and enhance your Minecraft server starts here.
-    </p>
-
-    <!-- Feature Highlights -->
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10 max-w-4xl">
-      <div class="bg-[#1f1e1c] border border-[#262423] p-5 rounded-md text-left">
-        <h3 class="text-white text-sm font-semibold mb-2">Server Support</h3>
-        <p class="text-xs text-gray-400 leading-relaxed">
-          Get help with plugins, permissions, errors, performance, and server setup from experienced admins.
+          Drei’s Vault is the official Discord community for Minecraft server owners and players seeking reliable
+          support and exclusive content. Join to get help with server setup, plugins, and troubleshooting, access
+          curated Vibrant Visuals Marketplace releases, and unlock the free Vibrant Adventures world. Everything you
+          need to build, manage, and enhance your Minecraft server starts here.
         </p>
-      </div>
 
-      <div class="bg-[#1f1e1c] border border-[#262423] p-5 rounded-md text-left">
-        <h3 class="text-white text-sm font-semibold mb-2">Exclusive Content</h3>
-        <p class="text-xs text-gray-400 leading-relaxed">
-  A private Discord space where Drei provides guidance, answers questions,
-  and helps players get the most out of their Minecraft experience.
-</p>
+        <!-- Feature Highlights -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10 max-w-4xl">
+          <div class="bg-[#1f1e1c] border border-[#262423] p-5 rounded-md text-left">
+            <h3 class="text-white text-sm font-semibold mb-2">Server Support</h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Get help with plugins, permissions, errors, performance, and server setup from experienced admins.
+            </p>
+          </div>
 
-      </div>
+          <div class="bg-[#1f1e1c] border border-[#262423] p-5 rounded-md text-left">
+            <h3 class="text-white text-sm font-semibold mb-2">Exclusive Content</h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              A private Discord space where Drei provides guidance, answers questions,
+              and helps players get the most out of their Minecraft experience.
+            </p>
 
-      <div class="bg-[#1f1e1c] border border-[#262423] p-5 rounded-md text-left">
-        <h3 class="text-white text-sm font-semibold mb-2">Community Vault</h3>
-        <p class="text-xs text-gray-400 leading-relaxed">
-          Join discussions, share builds, report issues, and collaborate with other Minecraft creators.
-        </p>
-      </div>
-    </div>
+          </div>
 
-    <!-- How It Works Flow -->
-    <div class="mt-14 max-w-3xl w-full">
-      <div class="flex flex-col sm:flex-row justify-between gap-6 text-xs text-gray-400">
-        <div class="flex items-start gap-3">
-          <span class="text-[#631C64] font-bold">01</span>
-          <p>Join the Discord server</p>
+          <div class="bg-[#1f1e1c] border border-[#262423] p-5 rounded-md text-left">
+            <h3 class="text-white text-sm font-semibold mb-2">Community Vault</h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Join discussions, share builds, report issues, and collaborate with other Minecraft creators.
+            </p>
+          </div>
         </div>
-        <div class="flex items-start gap-3">
-          <span class="text-[#631C64] font-bold">02</span>
-          <p>Open a support or access ticket</p>
-        </div>
-        <div class="flex items-start gap-3">
-          <span class="text-[#631C64] font-bold">03</span>
-          <p>Get help, content, or rewards</p>
-        </div>
-      </div>
-    </div>
 
-    <!-- Trust / Social Proof Badges -->
-    <div class="flex justify-center gap-6 mt-10 text-xs text-gray-400">
-      <span class="bg-[#262423] px-3 py-1 rounded-full border border-[#262423]">
-        Active Support
-      </span>
-      <span class="bg-[#262423] px-3 py-1 rounded-full border border-[#262423]">
-        Minecraft Focused
-      </span>
-      <span class="bg-[#262423] px-3 py-1 rounded-full border border-[#262423]">
-        Community Driven
-      </span>
-    </div>
+        <!-- How It Works Flow -->
+        <div class="mt-14 max-w-3xl w-full">
+          <div class="flex flex-col sm:flex-row justify-between gap-6 text-xs text-gray-400">
+            <div class="flex items-start gap-3">
+              <span class="text-[#631C64] font-bold">01</span>
+              <p>Join the Discord server</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-[#631C64] font-bold">02</span>
+              <p>Open a support or access ticket</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-[#631C64] font-bold">03</span>
+              <p>Get help, content, or rewards</p>
+            </div>
+          </div>
+        </div>
 
-    <!-- Actions -->
-    <div class="mt-6">
-      <a href="https://discord.gg/pHJajfrCXf"
-        class="inline-flex items-center justify-center
+        <!-- Trust / Social Proof Badges -->
+        <div class="flex justify-center gap-6 mt-10 text-xs text-gray-400">
+          <span class="bg-[#262423] px-3 py-1 rounded-full border border-[#262423]">
+            Active Support
+          </span>
+          <span class="bg-[#262423] px-3 py-1 rounded-full border border-[#262423]">
+            Minecraft Focused
+          </span>
+          <span class="bg-[#262423] px-3 py-1 rounded-full border border-[#262423]">
+            Community Driven
+          </span>
+        </div>
+
+        <!-- Actions -->
+        <div class="mt-6">
+          <a href="https://discord.gg/pHJajfrCXf" class="inline-flex items-center justify-center
                w-full sm:w-[260px]
                px-6 py-3 mt-4
                text-sm font-medium text-white
@@ -552,73 +638,67 @@ This vibrant pink armor set, featuring detailed gills and tail, makes exploring,
                focus:ring focus:ring-blue-300 focus:ring-opacity-80
                cursor-none gap-2">
 
-        <!-- Vault / Access Icon -->
-        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22.7 19.3l-6.4-6.4a7 7 0 10-2.8 2.8l6.4 6.4a2 2 0 002.8-2.8zM10 15a5 5 0 110-10 5 5 0 010 10z"/>
-        </svg>
+            <!-- Vault / Access Icon -->
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M22.7 19.3l-6.4-6.4a7 7 0 10-2.8 2.8l6.4 6.4a2 2 0 002.8-2.8zM10 15a5 5 0 110-10 5 5 0 010 10z" />
+            </svg>
 
-        <span>Join Drei’s Vault</span>
-      </a>
-    </div>
+            <span>Join Drei’s Vault</span>
+          </a>
+        </div>
 
-  </div>
-</section>
+      </div>
+    </section>
 
-<!-- Join Server Section (Dark – Matches Shop & Vault) -->
-<section class="relative overflow-hidden bg-[#171614] section ">
+    <!-- Join Server Section (Dark – Matches Shop & Vault) -->
+    <section class="relative overflow-hidden bg-[#171614] section ">
 
-  <!-- Content -->
-  <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
+      <!-- Content -->
+      <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
 
-    <!-- Logo -->
-    <img
-      src="/assets/yakisova-logo.png"
-      alt="Yakisova Logo"
-      class="mx-auto mb-8 opacity-90" />
+        <!-- Logo -->
+        <img src="/assets/yakisova-logo.png" alt="Yakisova Logo" class="mx-auto mb-8 opacity-90" />
 
-    <!-- Title -->
-    <h2
-      class="text-white tracking-[1.5px] drop-shadow-[0_6px_18px_rgba(255,255,255,0.15)]
-             text-[42px] sm:text-[56px] xl:text-[72px]"
-      style="
+        <!-- Title -->
+        <h2 class="text-white tracking-[1.5px] drop-shadow-[0_6px_18px_rgba(255,255,255,0.15)]
+             text-[42px] sm:text-[56px] xl:text-[72px]" style="
         font-family: 'Micro 5', sans-serif;
         font-weight: 400;
         -webkit-text-stroke: 3px #ffffff;
         line-height: 1;
       ">
-      JOIN YAKISOVA
-    </h2>
+          JOIN YAKISOVA
+        </h2>
 
-    <!-- Description -->
-    <p class="mt-4 max-w-xl mx-auto text-sm text-gray-400 leading-relaxed">
-      Step into Yakisova — a Minecraft SMP built for creativity, progression,
-      and community-driven gameplay. Join the server, connect on Discord,
-      and start your adventure today.
-    </p>
+        <!-- Description -->
+        <p class="mt-4 max-w-xl mx-auto text-sm text-gray-400 leading-relaxed">
+          Step into Yakisova — a Minecraft SMP built for creativity, progression,
+          and community-driven gameplay. Join the server, connect on Discord,
+          and start your adventure today.
+        </p>
 
-    <!-- Tags -->
-    <div class="flex flex-wrap justify-center gap-2 mt-6 text-xs">
-      <span class="bg-[#262423] text-gray-300 px-3 py-1 rounded-full border border-[#262423]">
-        24/7 Online
-      </span>
-      <span class="bg-[#262423] text-gray-300 px-3 py-1 rounded-full border border-[#262423]">
-        SMP Server
-      </span>
-      <span class="bg-[#262423] text-gray-300 px-3 py-1 rounded-full border border-[#262423]">
-        Friendly Community
-      </span>
-      <span class="bg-[#262423] text-gray-300 px-3 py-1 rounded-full border border-[#262423]">
-        100+ Players
-      </span>
-    </div>
+        <!-- Tags -->
+        <div class="flex flex-wrap justify-center gap-2 mt-6 text-xs">
+          <span class="bg-[#262423] text-gray-300 px-3 py-1 rounded-full border border-[#262423]">
+            24/7 Online
+          </span>
+          <span class="bg-[#262423] text-gray-300 px-3 py-1 rounded-full border border-[#262423]">
+            SMP Server
+          </span>
+          <span class="bg-[#262423] text-gray-300 px-3 py-1 rounded-full border border-[#262423]">
+            Friendly Community
+          </span>
+          <span class="bg-[#262423] text-gray-300 px-3 py-1 rounded-full border border-[#262423]">
+            100+ Players
+          </span>
+        </div>
 
-    <!-- Actions -->
-    <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+        <!-- Actions -->
+        <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
 
-      <!-- Copy IP -->
-      <button
-        onclick="copyIP()"
-        class=" w-full sm:w-[220px]
+          <!-- Copy IP -->
+          <button onclick="copyIP()" class=" w-full sm:w-[220px]
                py-3 px-6
                text-sm font-medium text-white
                border border-[#262423]
@@ -626,14 +706,11 @@ This vibrant pink armor set, featuring detailed gills and tail, makes exploring,
                hover:bg-[#262423]
                transition rounded-md
                cursor-none">
-        Copy Server IP
-      </button>
+            Copy Server IP
+          </button>
 
-      <!-- Discord -->
-      <a
-        href="https://discord.gg/yakisova"
-        target="_blank"
-        class=" w-full sm:w-[220px]
+          <!-- Discord -->
+          <a href="https://discord.gg/yakisova" target="_blank" class=" w-full sm:w-[220px]
                py-3 px-6
                text-sm font-medium
                border border-[#631C64]
@@ -644,34 +721,35 @@ This vibrant pink armor set, featuring detailed gills and tail, makes exploring,
                flex items-center justify-center gap-2
                cursor-none">
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" class="w-5 h-5 fill-current">
-          <path
-            d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83A72.37,72.37,0,0,0,45.64,0A105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.23c.91-.66,1.8-1.34,2.66-2a71.4,71.4,0,0,0,64.36,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.24,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.21h0C129.24,52.84,121.1,29.11,107.7,8.07Z" />
-        </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" class="w-5 h-5 fill-current">
+              <path
+                d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83A72.37,72.37,0,0,0,45.64,0A105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.23c.91-.66,1.8-1.34,2.66-2a71.4,71.4,0,0,0,64.36,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.24,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.21h0C129.24,52.84,121.1,29.11,107.7,8.07Z" />
+            </svg>
 
-        Join Discord
-      </a>
-    </div>
+            Join Discord
+          </a>
+        </div>
 
-  </div>
+      </div>
 
-  <!-- Toast Notification -->
-  <div id="copy-toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#262423] text-white px-6 py-3 rounded-md shadow-lg opacity-0 transition-opacity duration-300">
-    Server IP copied!
-  </div>
+      <!-- Toast Notification -->
+      <div id="copy-toast"
+        class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#262423] text-white px-6 py-3 rounded-md shadow-lg opacity-0 transition-opacity duration-300">
+        Server IP copied!
+      </div>
 
-</section>
+    </section>
 
-<script>
-function copyIP() {
-  navigator.clipboard.writeText('yakisova.net');
-  const toast = document.getElementById('copy-toast');
-  toast.classList.add('opacity-100');
-  setTimeout(() => { toast.classList.remove('opacity-100'); }, 2000);
-}
+    <script>
+      function copyIP() {
+        navigator.clipboard.writeText('yakisova.net');
+        const toast = document.getElementById('copy-toast');
+        toast.classList.add('opacity-100');
+        setTimeout(() => { toast.classList.remove('opacity-100'); }, 2000);
+      }
 
 
-</script>
+    </script>
 
 
 
@@ -691,9 +769,14 @@ function copyIP() {
         </div>
 
         <nav class="flex flex-wrap justify-center gap-6 text-sm font-medium text-gray-600 dark:text-gray-300">
-          <a href="#shop" class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300 cursor-none">Shop</a>
-          <a href="#" class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300 cursor-none">Drei's Vault</a>
-          <a href="#" class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300 cursor-none">Server IP</a>
+          <a href="#shop"
+            class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300 cursor-none">Shop</a>
+          <a href="#"
+            class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300 cursor-none">Drei's
+            Vault</a>
+          <a href="#"
+            class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300 cursor-none">Server
+            IP</a>
         </nav>
 
         <div class="flex items-center space-x-4">
@@ -736,45 +819,53 @@ function copyIP() {
 
 <script>
 
+// Get references to elements
+const playNowBtn = document.getElementById('open-playnow-popup');
+const modal = document.getElementById('playnowhero-section');
+const backdrop = document.getElementById('playnow-backdrop');
+const closeBtn = document.getElementById('close-playnow');
+const confirmBtn = document.getElementById('confirm-playnow');
 
-
-document.getElementById('copy-ip-btn').addEventListener('click', function (e) {
+// Function to open modal
+playNowBtn.addEventListener('click', (e) => {
   e.preventDefault();
-
-  const ip = document.getElementById('minecraft-ip').innerText.trim();
-  const toast = document.getElementById('copy-toast');
-
-  navigator.clipboard.writeText(ip).then(() => {
-    // Show toast
-    toast.classList.remove('opacity-0');
-    toast.classList.add('opacity-100');
-
-    // Hide toast after 2 seconds
-    setTimeout(() => {
-      toast.classList.remove('opacity-100');
-      toast.classList.add('opacity-0');
-    }, 2000);
-  }).catch(() => {
-    alert('Failed to copy IP. Clipboard access is not available.');
-  });
+  modal.classList.remove('hidden');
 });
 
+// Function to close modal
+function closeModal() {
+  modal.classList.add('hidden');
+}
+
+closeBtn.addEventListener('click', closeModal);
+backdrop.addEventListener('click', closeModal);
+confirmBtn.addEventListener('click', closeModal);
 
 
-  const openBtn = document.getElementById('open-playnow-popup');
-  const popup = document.getElementById('playnow-popup');
+  document.getElementById('copy-ip-btn').addEventListener('click', function (e) {
+    e.preventDefault();
 
-  openBtn.addEventListener('click', function (e) {
-    e.preventDefault(); // prevent default anchor behavior
-    popup.style.display = 'flex'; // show the popup
+    const ip = document.getElementById('minecraft-ip').innerText.trim();
+    const toast = document.getElementById('copy-toast');
+
+    navigator.clipboard.writeText(ip).then(() => {
+      // Show toast
+      toast.classList.remove('opacity-0');
+      toast.classList.add('opacity-100');
+
+      // Hide toast after 2 seconds
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+      }, 2000);
+    }).catch(() => {
+      alert('Failed to copy IP. Clipboard access is not available.');
+    });
   });
 
-  // Close popup when clicking outside the container
-  popup.addEventListener('click', function (e) {
-    if (e.target === popup) {
-      popup.style.display = 'none';
-    }
-  });
+
+
+
 
 
   function copyIP() {
@@ -800,21 +891,21 @@ document.getElementById('copy-ip-btn').addEventListener('click', function (e) {
     });
   });
 
-const cursor = document.getElementById("custom-cursor");
+  const cursor = document.getElementById("custom-cursor");
 
-let mouseX = 0, mouseY = 0;
+  let mouseX = 0, mouseY = 0;
 
-window.addEventListener("mousemove", (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-});
+  window.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
 
-function animateCursor() {
-  cursor.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-  requestAnimationFrame(animateCursor);
-}
+  function animateCursor() {
+    cursor.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+    requestAnimationFrame(animateCursor);
+  }
 
-animateCursor();
+  animateCursor();
 
 
 
