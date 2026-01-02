@@ -32,14 +32,14 @@
   }
 </style>
 
-<body class="cursor-none">
+<body class="">
 
 
-  <div id="custom-cursor" ></div>
+
   <!-- Navbar -->
-
 <header x-data="{ isOpen: false }"
-  class="bg-[#1f1e1c] border-b border-[#262423] text-sm w-full relative overflow-hidden">
+        class="sticky top-0 z-50 bg-[#1f1e1c]/10 backdrop-blur-lg  text-sm w-full transition-colors duration-300">
+
 
   <nav class="max-w-[85rem] w-full mx-auto px-4 py-3 flex items-center justify-between">
 
@@ -84,18 +84,19 @@
 
 
       <!-- Links -->
-      <div class="flex flex-col lg:flex-row gap-4 lg:gap-6 cursor-none">
-        <a href="#shop" class="text-violet-500 font-medium hover:text-violet-400 cursor-none">Shop</a>
-        <a href="#vault" class="text-gray-400 font-medium hover:text-violet-400 cursor-none">Vault</a>
-        <a href="#about" class="text-gray-400 font-medium hover:text-violet-400 cursor-none">About</a>
+      <div class="flex flex-col lg:flex-row gap-4 lg:gap-6 ">
+        <a href="#shop" class="text-violet-500 font-medium hover:text-violet-400 ">Shop</a>
+                <a href="#hero" class="text-gray-400 font-medium hover:text-violet-400">Home</a>
+        <a href="#vault" class="text-gray-400 font-medium hover:text-violet-400">Vault</a>
+        <a href="#about" class="text-gray-400 font-medium hover:text-violet-400">About</a>
       </div>
 
       <!-- Buy Now (mobile inside menu) -->
       <div class="mt-6 lg:hidden">
         <a href="#"
-          class="cursor-none w-full py-2 px-4 inline-flex justify-center
+          class=" w-full py-2 px-4 inline-flex justify-center
                  text-sm font-medium rounded-lg 
-                 bg-[#1f1e1c] text-white hover:bg-[#262423]">
+                 text-white">
         </a>
       </div>
     </div>
@@ -103,9 +104,9 @@
     <!-- Buy Now (desktop) -->
     <div class="hidden lg:flex items-center gap-x-2">
       <a href="#"
-        class="cursor-none py-2 px-4 inline-flex items-center gap-x-2
+        class=" py-2 px-4 inline-flex items-center gap-x-2
                text-sm font-medium rounded-lg 
-               bg-[#1f1e1c] text-white hover:bg-[#262423]">
+               text-white ">
 
       </a>
     </div>
@@ -121,7 +122,7 @@
 
 
     <!-- Hero Section -->
-    <section class="hero-section relative h-[840px] mb-0">
+    <section class="hero-section relative h-[840px] mb-0" id="hero">
       <div id="hero-particles" class="absolute inset-0 z-0">
 
         <img class="hero-bg h-[690px]" src="assets/cover-pictures/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.png"
@@ -138,7 +139,7 @@
             </p>
 
             <div class="hero-buttons-row flex items-center gap-6 mt-6">
-              <a class="hero-playnow-btn cursor-none" href="#" id="open-playnow-popup">
+              <a class="hero-playnow-btn " href="#" id="open-playnow-popup">
                 PLAY NOW
               </a>
 
@@ -146,17 +147,17 @@
               <div class="hero-socials flex items-center gap-4">
                 <a href="https://discord.gg/yakisova" target="_blank" rel="noopener noreferrer">
                   <img src="assets/discord-logo.png" alt="Discord" height="28" width="28"
-                    class="cursor-none hover:scale-125 transition-transform duration-300">
+                    class=" hover:scale-125 transition-transform duration-300">
                 </a>
 
                 <a href="https://www.instagram.com/yakisovasmp/" target="_blank" rel="noopener noreferrer">
                   <img src="assets/ig-logo.png" alt="Instagram" height="28" width="28"
-                    class="cursor-none hover:scale-125 transition-transform duration-300">
+                    class=" hover:scale-125 transition-transform duration-300">
                 </a>
 
                 <a href="https://www.tiktok.com/@dreiwhitee" target="_blank" rel="noopener noreferrer">
                   <img src="assets/tiktok-logo.png" alt="TikTok" height="28" width="28"
-                    class="cursor-none hover:scale-125 transition-transform duration-300">
+                    class=" hover:scale-125 transition-transform duration-300">
                 </a>
               </div>
 
@@ -166,11 +167,11 @@
 
           <div class="hero-gallery-row flex items-center justify-center gap-12  ">
             <img src="assets/cover-pictures/2025-11-08_16.08.07.png" alt="Gallery 1"
-              class="cursor-none hover:scale-125 transition-transform duration-300" id="gallery-1">
+              class=" hover:scale-125 transition-transform duration-300" id="gallery-1">
             <img src="assets/cover-pictures/2025-11-08_16.05.26.png" alt="Gallery 2"
-              class="cursor-none hover:scale-125 transition-transform duration-300" id="gallery-2">
+              class=" hover:scale-125 transition-transform duration-300" id="gallery-2">
             <img src="assets/cover-pictures/2025-11-08_16.09.04.png" alt="Gallery 3"
-              class="cursor-none hover:scale-125 transition-transform duration-300" id="gallery-3">
+              class=" hover:scale-125 transition-transform duration-300" id="gallery-3">
           </div>
 
         </div>
@@ -187,7 +188,7 @@
           class="relative bg-[#e6ddd6] w-[920px] h-[420px] border-[6px] border-[#2b2b2b] flex font-['Press_Start_2P']">
 
           <button id="close-discord-modal"
-            class="absolute top-3 right-3 w-10 h-10 bg-[#2b2b2b] text-white flex items-center justify-center hover:scale-110 transition cursor-none">
+            class="absolute top-3 right-3 w-10 h-10 bg-[#2b2b2b] text-white flex items-center justify-center hover:scale-110 transition ">
             ✕
           </button>
 
@@ -195,12 +196,12 @@
             <h2 class="text-[26px] text-center tracking-widest">JOIN YAKISOVA DISCORD</h2>
 
             <button
-              class="bg-[#7a2b8f] text-white py-4 border-[4px] border-[#2b2b2b] hover:brightness-110 transition cursor-none">
+              class="bg-[#7a2b8f] text-white py-4 border-[4px] border-[#2b2b2b] hover:brightness-110 transition ">
               PLAY NOW →
             </button>
 
             <button
-              class="bg-[#d9cfc7] text-black py-4 border-[4px] border-[#2b2b2b] hover:brightness-105 transition cursor-none">
+              class="bg-[#d9cfc7] text-black py-4 border-[4px] border-[#2b2b2b] hover:brightness-105 transition ">
               SIGN UP
             </button>
 
@@ -249,12 +250,12 @@
             <div class="box-1">
 
               <!-- PLAY NOW (Copy IP) -->
-              <a class="hero-ipaddress-btn cursor-none" href="#" id="copy-ip-btn">
+              <a class="hero-ipaddress-btn " href="#" id="copy-ip-btn">
                 PLAY NOW
               </a>
 
               <!-- DISCORD -->
-              <a class="hero-signup-btn cursor-none" href="https://discord.gg/yakisova" target="_blank"
+              <a class="hero-signup-btn" href="https://discord.gg/yakisova" target="_blank"
                 rel="noopener noreferrer">
                 JOIN DISCORD
               </a>
@@ -356,7 +357,7 @@
                 menace with a striking black and gold design, featuring intricate, imposing weaponry.
               </p>
               <hr style="border: none; height: 2px; background-color: #262423; width: 100%; margin: 0.5rem 0;">
-              <div class="flex justify-between items-center">
+              <div class="flex justify-between items-center cursor-pointer">
                 <button @click="isOpen = true" class="buy-now-btn w-3/4">
                   BUY NOW
                   <span class="ml-2 text-xl font-light">&gt;</span>
@@ -636,7 +637,7 @@
                bg-[#631C64] hover:bg-[#7A2A7B]
                rounded-md shadow
                focus:ring focus:ring-blue-300 focus:ring-opacity-80
-               cursor-none gap-2">
+                gap-2">
 
             <!-- Vault / Access Icon -->
             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -705,7 +706,7 @@
                bg-[#1f1e1c]
                hover:bg-[#262423]
                transition rounded-md
-               cursor-none">
+               ">
             Copy Server IP
           </button>
 
@@ -719,7 +720,7 @@
                hover:text-white
                transition rounded-md
                flex items-center justify-center gap-2
-               cursor-none">
+              ">
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" class="w-5 h-5 fill-current">
               <path
@@ -770,23 +771,23 @@
 
         <nav class="flex flex-wrap justify-center gap-6 text-sm font-medium text-gray-600 dark:text-gray-300">
           <a href="#shop"
-            class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300 cursor-none">Shop</a>
-          <a href="#"
-            class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300 cursor-none">Drei's
+            class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300 cursor-pointer">Shop</a>
+          <a href="#vault"
+            class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300 cursor-pointer">Drei's
             Vault</a>
-          <a href="#"
-            class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300 cursor-none">Server
+          <a href="#hero"
+            class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300 cursor-pointer">Server
             IP</a>
         </nav>
 
         <div class="flex items-center space-x-4">
-          <a href="https://discord.gg/yakisova" class="w-6 h-6 cursor-none">
+          <a href="https://discord.gg/yakisova" class="w-6 h-6 cursor-pointer">
             <img src="assets/discord-logo.png" alt="Discord" class="w-full h-full object-contain">
           </a>
-          <a href="https://www.instagram.com/yakisovasmp" class="w-6 h-6 cursor-none">
+          <a href="https://www.instagram.com/yakisovasmp" class="w-6 h-6 cursor-pointer">
             <img src="assets/ig-logo.png" alt="Instagram" class="w-full h-full object-contain">
           </a>
-          <a href="https://www.tiktok.com/@dreiwhite" class="w-6 h-6 cursor-none">
+          <a href="https://www.tiktok.com/@dreiwhite" class="w-6 h-6 cursor-pointer">
             <img src="assets/tiktok-logo.png" alt="Tiktok" class="w-full h-full object-contain">
           </a>
         </div>
@@ -819,20 +820,36 @@
 
 <script>
 
-// Get references to elements
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default jump
+
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'      
+        });
+      }
+    });
+  });
+
+
+
+
 const playNowBtn = document.getElementById('open-playnow-popup');
 const modal = document.getElementById('playnowhero-section');
 const backdrop = document.getElementById('playnow-backdrop');
 const closeBtn = document.getElementById('close-playnow');
 const confirmBtn = document.getElementById('confirm-playnow');
 
-// Function to open modal
+
 playNowBtn.addEventListener('click', (e) => {
   e.preventDefault();
   modal.classList.remove('hidden');
 });
 
-// Function to close modal
+
 function closeModal() {
   modal.classList.add('hidden');
 }
@@ -849,11 +866,11 @@ confirmBtn.addEventListener('click', closeModal);
     const toast = document.getElementById('copy-toast');
 
     navigator.clipboard.writeText(ip).then(() => {
-      // Show toast
+   
       toast.classList.remove('opacity-0');
       toast.classList.add('opacity-100');
 
-      // Hide toast after 2 seconds
+    
       setTimeout(() => {
         toast.classList.remove('opacity-100');
         toast.classList.add('opacity-0');
@@ -891,21 +908,7 @@ confirmBtn.addEventListener('click', closeModal);
     });
   });
 
-  const cursor = document.getElementById("custom-cursor");
 
-  let mouseX = 0, mouseY = 0;
-
-  window.addEventListener("mousemove", (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
-
-  function animateCursor() {
-    cursor.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-    requestAnimationFrame(animateCursor);
-  }
-
-  animateCursor();
 
 
 

@@ -4,7 +4,7 @@ body {
   margin: 0;
   /* font-family: 'Montserrat', Arial, sans-serif; */
   /* cursor: url("assets/cursor.png") 16 16, auto; */
-   cursor: none;
+
 }
 
 
@@ -16,15 +16,7 @@ body {
   border-bottom: 5px solid rgba(40, 40, 40, 0.47);
 }
 
-#custom-cursor {
-  position: fixed;
-  width: 54px;
-  height: 54px;
-  background: url("assets/cursor2.png") no-repeat center / contain;
-  pointer-events: none;
-  z-index: 9999;
-    transition: transform 0.1s ease-out; 
-}
+
 
 
 .navbar-logo img {
@@ -71,7 +63,7 @@ gap:20px;
   letter-spacing: .05em;
   padding: 3px 15px;
   border-radius: 0px;
-  cursor: none;
+
   color: white;
   transition: all 0.4s ease-in-out;
 }
