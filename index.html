@@ -35,81 +35,7 @@
 <div id="custom-cursor" style="pointer-events:none;"></div>
   <!-- Navbar -->
 
-  <header x-data="{ isOpen: false }"
-  class="bg-[#1f1e1c] border-b border-[#262423] text-sm w-full relative overflow-hidden">
 
-  <nav class="max-w-[85rem] w-full mx-auto px-4 py-3 flex items-center justify-between">
-
-    <!-- Logo -->
-    <a href="#" class="flex-none">
-      <img src="assets/yakisova-logo.png" alt="Logo" class="h-8 w-auto">
-    </a>
-
-    <!-- Mobile menu button -->
-    <div class="flex lg:hidden">
-      <button
-        @click="isOpen = !isOpen"
-        class="text-gray-200 hover:text-violet-400 focus:outline-none"
-        aria-label="Toggle menu"
-      >
-        <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg"
-          class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-          stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M4 8h16M4 16h16" />
-        </svg>
-
-        <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg"
-          class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-          stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-    </div>
-
-    <!-- Menu -->
-   <div
-  x-cloak
-  x-show="isOpen || window.innerWidth >= 1024"
-  x-transition
-  class="absolute lg:static inset-x-0 top-full z-30
-         w-full lg:w-auto
-         bg-[#1f1e1c] lg:bg-transparent
-         px-4 py-6 lg:p-0
-         lg:flex lg:items-center">
-
-
-      <!-- Links -->
-      <div class="flex flex-col lg:flex-row gap-4 lg:gap-6 cursor-none">
-        <a href="#shop" class="text-violet-500 font-medium hover:text-violet-400 cursor-none">Shop</a>
-        <a href="#vault" class="text-gray-400 font-medium hover:text-violet-400 cursor-none">Vault</a>
-        <a href="#about" class="text-gray-400 font-medium hover:text-violet-400 cursor-none">About</a>
-      </div>
-
-      <!-- Buy Now (mobile inside menu) -->
-      <div class="mt-6 lg:hidden">
-        <a href="#"
-          class="cursor-none w-full py-2 px-4 inline-flex justify-center
-                 text-sm font-medium rounded-lg border border-[#262423]
-                 bg-[#1f1e1c] text-white hover:bg-[#262423]">
-          BUY NOW
-        </a>
-      </div>
-    </div>
-
-    <!-- Buy Now (desktop) -->
-    <div class="hidden lg:flex items-center gap-x-2">
-      <a href="#"
-        class="cursor-none py-2 px-4 inline-flex items-center gap-x-2
-               text-sm font-medium rounded-lg border border-[#262423]
-               bg-[#1f1e1c] text-white hover:bg-[#262423]">
-        BUY NOW
-      </a>
-    </div>
-
-  </nav>
-</header>
 
 
   <main id="content">
@@ -238,22 +164,50 @@ Begin your story with a free adventure world and shape your path as Yakisova evo
       </div>
 
 
-      <div class="playnow-popup" id="playnow-popup">
-        <div class="container-playnow-pop">
-          <div class="title-container">
-            <h1>JOIN YAKISOVA NOW </h1>
-          </div>
-          <div class="2boxes-container">
-            <div class="box-1">
-              <a class="hero-ipaddress-btn cursor-none" href="#">PLAY NOW</a>
-              <a class="hero-signup-btn cursor-none" href="#">SIGN UP </a>
-              <div class="bg-[#E3E3E3] w-[460px] h-[2px]"></div>
-              <p>Discover Marketplace content made and updated especially for Vibrant Visuals. Experience the difference
-                with the free Vibrant Adventures world!</p>
-            </div>
-          </div>
-        </div>
+   <div class="playnow-popup" id="playnow-popup">
+  <div class="container-playnow-pop">
+    <div class="title-container">
+      <h1>JOIN YAKISOVA NOW</h1>
+    </div>
+
+    <div class="2boxes-container">
+      <div class="box-1">
+
+        <!-- PLAY NOW (Copy IP) -->
+        <a
+          class="hero-ipaddress-btn cursor-none"
+          href="#"
+          id="copy-ip-btn">
+          PLAY NOW
+        </a>
+
+        <!-- DISCORD -->
+        <a
+          class="hero-signup-btn cursor-none"
+          href="https://discord.gg/yakisova"
+          target="_blank"
+          rel="noopener noreferrer">
+          JOIN DISCORD
+        </a>
+
+        <!-- Hidden IP -->
+        <span id="minecraft-ip" style="display:none;">
+          play.yakisova.net
+        </span>
+
+        <div class="bg-[#E3E3E3] w-[460px] h-[2px]"></div>
+
+     <p>
+  Join Yakisova — a community-driven Minecraft server featuring custom content,
+  balanced gameplay, and ongoing updates crafted for long-term adventure.
+</p>
+
+
       </div>
+    </div>
+  </div>
+</div>
+
     </section>
 
 
@@ -266,11 +220,12 @@ Begin your story with a free adventure world and shape your path as Yakisova evo
 <section class="shop-section section" id="shop">
 
     <div class="shop-title">
-      <h1>DISCOVER OUR SHOP</h1>
-      <p class="justify-self-center">
-        Discover Marketplace content made and updated especially for Vibrant Visuals.
-        Experience the difference with the free Vibrant Adventures world!
-      </p>
+     <h1>DISCOVER OUR SHOP</h1>
+<p class="justify-self-center">
+  Customize your character with exclusive in-game cosmetics designed to enhance
+  style and expression—no gameplay advantages, just pure visual flair.
+</p>
+
     </div>
     <div class="shop-grid">
       <div class="mx-auto overflow-hidden mb-8" style="width: 428px;">
@@ -539,8 +494,10 @@ This vibrant pink armor set, featuring detailed gills and tail, makes exploring,
       <div class="bg-[#1f1e1c] border border-[#262423] p-5 rounded-md text-left">
         <h3 class="text-white text-sm font-semibold mb-2">Exclusive Content</h3>
         <p class="text-xs text-gray-400 leading-relaxed">
-          Access private Marketplace drops, previews, and updates crafted by Vibrant Visuals.
-        </p>
+  A private Discord space where Drei provides guidance, answers questions,
+  and helps players get the most out of their Minecraft experience.
+</p>
+
       </div>
 
       <div class="bg-[#1f1e1c] border border-[#262423] p-5 rounded-md text-left">
@@ -712,6 +669,8 @@ function copyIP() {
   toast.classList.add('opacity-100');
   setTimeout(() => { toast.classList.remove('opacity-100'); }, 2000);
 }
+
+
 </script>
 
 
@@ -738,13 +697,13 @@ function copyIP() {
         </nav>
 
         <div class="flex items-center space-x-4">
-          <a href="#" class="w-6 h-6">
+          <a href="https://discord.gg/yakisova" class="w-6 h-6 cursor-none">
             <img src="assets/discord-logo.png" alt="Discord" class="w-full h-full object-contain">
           </a>
-          <a href="#" class="w-6 h-6">
+          <a href="https://www.instagram.com/yakisovasmp" class="w-6 h-6 cursor-none">
             <img src="assets/ig-logo.png" alt="Instagram" class="w-full h-full object-contain">
           </a>
-          <a href="#" class="w-6 h-6">
+          <a href="https://www.tiktok.com/@dreiwhite" class="w-6 h-6 cursor-none">
             <img src="assets/tiktok-logo.png" alt="Tiktok" class="w-full h-full object-contain">
           </a>
         </div>
@@ -776,6 +735,31 @@ function copyIP() {
 
 
 <script>
+
+
+
+document.getElementById('copy-ip-btn').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  const ip = document.getElementById('minecraft-ip').innerText.trim();
+  const toast = document.getElementById('copy-toast');
+
+  navigator.clipboard.writeText(ip).then(() => {
+    // Show toast
+    toast.classList.remove('opacity-0');
+    toast.classList.add('opacity-100');
+
+    // Hide toast after 2 seconds
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0');
+    }, 2000);
+  }).catch(() => {
+    alert('Failed to copy IP. Clipboard access is not available.');
+  });
+});
+
+
 
   const openBtn = document.getElementById('open-playnow-popup');
   const popup = document.getElementById('playnow-popup');
