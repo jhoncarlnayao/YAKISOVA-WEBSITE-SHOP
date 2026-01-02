@@ -132,13 +132,13 @@ border-bottom: 5px solid rgba(40, 40, 40, 0.47) inset;
 
 
 .hero-floating-card h2 {
-  font-size: 1.22rem;
+  font-size: 1.20rem;
   margin: 0 0 12px 0;
 }
 
 .hero-floating-card p {
   color: #ededed;
-  font-size: .93rem;
+  font-size: .80rem;
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 400;
   margin-top: 0;
@@ -795,8 +795,8 @@ width: 400px;
 /*  */
 /* Global vertical rhythm */
 .section {
-  padding-top: 155px;
-  padding-bottom: 155px;
+  padding-top: 150px;
+  padding-bottom: 150px;
 }
 
 @media (max-width: 768px) {

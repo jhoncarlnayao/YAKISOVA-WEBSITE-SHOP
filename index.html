@@ -29,7 +29,9 @@
 <style>
   [x-cloak] { display: none !important; }
 </style>
-<body>
+<body class="cursor-none">
+
+
 <div id="custom-cursor" style="pointer-events:none;"></div>
   <!-- Navbar -->
 
@@ -82,7 +84,7 @@
       <div class="flex flex-col lg:flex-row gap-4 lg:gap-6 cursor-none">
         <a href="#shop" class="text-violet-500 font-medium hover:text-violet-400 cursor-none">Shop</a>
         <a href="#vault" class="text-gray-400 font-medium hover:text-violet-400 cursor-none">Vault</a>
-        <a href="#" class="text-gray-400 font-medium hover:text-violet-400 cursor-none">About</a>
+        <a href="#about" class="text-gray-400 font-medium hover:text-violet-400 cursor-none">About</a>
       </div>
 
       <!-- Buy Now (mobile inside menu) -->
@@ -124,11 +126,11 @@
         <div class="hero-content-container flex flex-col items-center text-center pt-44 gap-10">
 
           <div class="hero-floating-card flex flex-col items-start text-left ">
-            <h2>Chase the Skies</h2>
+            <h2>Enter the World of Yakisova</h2>
 
             <p class="mt-3 max-w-md">
-              Discover Marketplace content made and updated especially for Vibrant Visuals.<br>
-              Experience the difference with the free Vibrant Adventures world!
+              Uncover a Minecraft realm filled with custom systems, handcrafted environments, and ongoing expansions.<br>
+Begin your story with a free adventure world and shape your path as Yakisova evolves.
             </p>
 
             <div class="hero-buttons-row flex items-center gap-6 mt-6">
@@ -137,14 +139,26 @@
               </a>
 
 
-              <div class="hero-socials flex items-center gap-4">
-                <img src="assets/discord-logo.png" alt="Discord" height="28" width="28"
-                  class="cursor-none hover:scale-125 transition-transform duration-300">
-                <img src="assets/ig-logo.png" alt="Instagram" height="28" width="28"
-                  class="cursor-none hover:scale-125 transition-transform duration-300">
-                <img src="assets/tiktok-logo.png" alt="Tiktok" height="28" width="28"
-                  class="cursor-none hover:scale-125 transition-transform duration-300">
-              </div>
+             <div class="hero-socials flex items-center gap-4">
+  <a href="https://discord.gg/yakisova" target="_blank" rel="noopener noreferrer">
+    <img src="assets/discord-logo.png" alt="Discord"
+      height="28" width="28"
+      class="cursor-none hover:scale-125 transition-transform duration-300">
+  </a>
+
+  <a href="https://www.instagram.com/yakisovasmp/" target="_blank" rel="noopener noreferrer">
+    <img src="assets/ig-logo.png" alt="Instagram"
+      height="28" width="28"
+      class="cursor-none hover:scale-125 transition-transform duration-300">
+  </a>
+
+  <a href="https://www.tiktok.com/@dreiwhitee" target="_blank" rel="noopener noreferrer">
+    <img src="assets/tiktok-logo.png" alt="TikTok"
+      height="28" width="28"
+      class="cursor-none hover:scale-125 transition-transform duration-300">
+  </a>
+</div>
+
             </div>
           </div>
 
@@ -288,7 +302,7 @@
               <div class="w-8 h-8 rounded-full flex items-center justify-center mr-2">
                 <img src="assets/dollar-icon.png" alt="Coin" class="w-8 h-8">
               </div>
-              <span class="text-xl font-bold" id="coin-price">250</span>
+              <span class="text-xl font-bold" id="coin-price">75</span>
             </div>
           </div>
         </div>
@@ -327,7 +341,7 @@ This vibrant pink armor set, featuring detailed gills and tail, makes exploring,
               <div class="w-8 h-8 rounded-full flex items-center justify-center mr-2">
                 <img src="assets/dollar-icon.png" alt="Coin" class="w-8 h-8">
               </div>
-              <span class="text-xl font-bold" id="coin-price">250</span>
+              <span class="text-xl font-bold" id="coin-price">75</span>
             </div>
           </div>
         </div>
@@ -363,7 +377,7 @@ This vibrant pink armor set, featuring detailed gills and tail, makes exploring,
               <div class="w-8 h-8 rounded-full flex items-center justify-center mr-2">
                 <img src="assets/dollar-icon.png" alt="Coin" class="w-8 h-8">
               </div>
-              <span class="text-xl font-bold" id="coin-price">250</span>
+              <span class="text-xl font-bold" id="coin-price">75</span>
             </div>
           </div>
         </div>
@@ -413,7 +427,7 @@ This vibrant pink armor set, featuring detailed gills and tail, makes exploring,
 
   <div class="flex justify-center items-center gap-2 mt-4">
     <img src="assets/dollar-icon.png" class="w-8 h-8">
-    <span class="text-2xl font-bold text-white">250</span>
+    <span class="text-2xl font-bold text-white">75</span>
   </div>
 
   <!-- Purchase Instructions -->
@@ -647,13 +661,14 @@ This vibrant pink armor set, featuring detailed gills and tail, makes exploring,
       <!-- Copy IP -->
       <button
         onclick="copyIP()"
-        class="cursor-pointer w-full sm:w-[220px]
+        class=" w-full sm:w-[220px]
                py-3 px-6
                text-sm font-medium text-white
                border border-[#262423]
                bg-[#1f1e1c]
                hover:bg-[#262423]
-               transition rounded-md">
+               transition rounded-md
+               cursor-none">
         Copy Server IP
       </button>
 
@@ -661,7 +676,7 @@ This vibrant pink armor set, featuring detailed gills and tail, makes exploring,
       <a
         href="https://discord.gg/yakisova"
         target="_blank"
-        class="cursor-pointer w-full sm:w-[220px]
+        class=" w-full sm:w-[220px]
                py-3 px-6
                text-sm font-medium
                border border-[#631C64]
@@ -669,7 +684,8 @@ This vibrant pink armor set, featuring detailed gills and tail, makes exploring,
                hover:bg-[#631C64]
                hover:text-white
                transition rounded-md
-               flex items-center justify-center gap-2">
+               flex items-center justify-center gap-2
+               cursor-none">
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" class="w-5 h-5 fill-current">
           <path
@@ -706,7 +722,7 @@ function copyIP() {
 
 
   <!-- Footer -->
-  <footer class="bg-#171614">
+  <footer class="bg-#171614" id="about">
     <div class="container flex flex-col p-6 mx-auto space-y-6">
 
       <div class="flex flex-col items-center justify-between sm:flex-row sm:space-y-0 space-y-4">
@@ -716,9 +732,9 @@ function copyIP() {
         </div>
 
         <nav class="flex flex-wrap justify-center gap-6 text-sm font-medium text-gray-600 dark:text-gray-300">
-          <a href="#shop" class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300">Shop</a>
-          <a href="#" class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300">Drei's Vault</a>
-          <a href="#" class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300">Server IP</a>
+          <a href="#shop" class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300 cursor-none">Shop</a>
+          <a href="#" class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300 cursor-none">Drei's Vault</a>
+          <a href="#" class="hover:text-blue-500 dark:hover:text-violet-400 transition-colors duration-300 cursor-none">Server IP</a>
         </nav>
 
         <div class="flex items-center space-x-4">
@@ -740,7 +756,7 @@ function copyIP() {
       <div class="flex flex-col items-center justify-between space-y-3 sm:flex-row sm:space-y-0">
 
         <p class="text-sm text-gray-600 dark:text-gray-300">
-          &copy; 2025 All Rights Reserved
+          &copy; 2026 All Rights Reserved
         </p>
 
         <p class="flex items-center text-sm text-gray-600 dark:text-gray-300 space-x-2">
